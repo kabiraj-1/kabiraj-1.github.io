@@ -15,7 +15,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kabirajbhatt.com.np">
     
-    <!-- Favicon -->
+    <!-- Favicon - Inline SVG -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
     
     <!-- Google Fonts -->
@@ -28,8 +28,8 @@
     
     <style>
         /* ============================================================
-           RESET & BASE
-           ============================================================ */
+           COMPLETE CSS - All styles embedded
+        ============================================================ */
         *,
         *::before,
         *::after {
@@ -105,9 +105,7 @@
             position: relative;
         }
         
-        /* ============================================================
-           SCROLLBAR
-           ============================================================ */
+        /* Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -125,9 +123,7 @@
             background: var(--secondary);
         }
         
-        /* ============================================================
-           TYPOGRAPHY
-           ============================================================ */
+        /* Typography */
         .section-title {
             text-align: center;
             margin-bottom: 70px;
@@ -174,9 +170,15 @@
             color: #b0c4e0;
         }
         
-        /* ============================================================
-           BUTTONS
-           ============================================================ */
+        .section-title .highlight {
+            color: var(--primary);
+        }
+        
+        body.dark-mode .section-title .highlight {
+            color: var(--accent);
+        }
+        
+        /* Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -270,9 +272,7 @@
             font-size: 1.05rem;
         }
         
-        /* ============================================================
-           HEADER
-           ============================================================ */
+        /* Header */
         .header {
             position: fixed;
             top: 0;
@@ -449,8 +449,8 @@
         }
         
         /* ============================================================
-           HERO SECTION
-           ============================================================ */
+           HERO SECTION - With IMAGE FALLBACKS
+        ============================================================ */
         .hero {
             padding-top: 160px;
             min-height: 100vh;
@@ -684,7 +684,9 @@
             color: #b0c4e0;
         }
         
-        /* Profile Image */
+        /* ============================================================
+           PROFILE IMAGE - With MULTIPLE FALLBACKS
+        ============================================================ */
         .hero-image {
             text-align: center;
             position: relative;
@@ -754,23 +756,74 @@
             }
         }
         
-        .profile-wrapper img {
-            border-radius: 50%;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.06);
-            background: #eef2ff;
-            aspect-ratio: 1/1;
-            object-fit: cover;
-            transition: var(--transition);
+        /* ============================================================
+           PROFILE IMAGE - FALLBACK SYSTEM
+           ============================================================ */
+        .profile-image-container {
             position: relative;
             z-index: 1;
+            border-radius: 50%;
+            overflow: hidden;
+            aspect-ratio: 1/1;
+            background: linear-gradient(135deg, #1e3a6f, #2e5a9f);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
-        body.dark-mode .profile-wrapper img {
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+        .profile-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
         
-        .profile-wrapper img:hover {
-            transform: scale(1.02) rotate(-2deg);
+        /* Fallback - when image fails to load */
+        .profile-image-container .fallback-avatar {
+            display: none;
+            font-size: 6rem;
+            color: #fff;
+            user-select: none;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .profile-image-container .fallback-initials {
+            display: none;
+            font-size: 4rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 2px;
+            user-select: none;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Show fallbacks when image fails */
+        .profile-image-container img.error + .fallback-avatar {
+            display: flex;
+        }
+        
+        .profile-image-container img.error + .fallback-avatar + .fallback-initials {
+            display: none;
+        }
+        
+        /* Alternative: use ::after pseudo element for fallback */
+        .profile-image-container .fallback-text {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .profile-image-container .fallback-text .emoji {
+            font-size: 5rem;
+        }
+        
+        .profile-image-container .fallback-text .name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
         }
         
         /* Floating Badges */
@@ -833,7 +886,7 @@
         
         /* ============================================================
            ABOUT SECTION
-           ============================================================ */
+        ============================================================ */
         .about {
             background: var(--white);
         }
@@ -887,20 +940,40 @@
             opacity: 0.12;
         }
         
-        .about-image img {
+        .about-image .about-img-container {
             border-radius: 30px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
+            overflow: hidden;
             aspect-ratio: 1/1;
-            object-fit: cover;
-            background: #eef2ff;
+            background: linear-gradient(135deg, #1e3a6f, #2e5a9f);
             position: relative;
             z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
         }
         
-        .about-image img:hover {
+        .about-image .about-img-container:hover {
             transform: scale(1.02);
             box-shadow: var(--shadow-hover);
+        }
+        
+        .about-image .about-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .about-image .about-img-container .about-fallback {
+            display: none;
+            font-size: 5rem;
+            color: #fff;
+            user-select: none;
+        }
+        
+        .about-image .about-img-container img.error + .about-fallback {
+            display: block;
         }
         
         .about-text h3 {
@@ -992,8 +1065,8 @@
         }
         
         /* ============================================================
-           SKILLS SECTION
-           ============================================================ */
+           SKILLS
+        ============================================================ */
         .skills {
             background: var(--light);
         }
@@ -1077,8 +1150,8 @@
         }
         
         /* ============================================================
-           PROJECTS SECTION
-           ============================================================ */
+           PROJECTS
+        ============================================================ */
         .projects {
             background: var(--white);
         }
@@ -1210,8 +1283,8 @@
         }
         
         /* ============================================================
-           SERVICES SECTION
-           ============================================================ */
+           SERVICES
+        ============================================================ */
         .services {
             background: var(--light);
         }
@@ -1323,70 +1396,8 @@
         }
         
         /* ============================================================
-           TESTIMONIALS / EXPERIENCE
-           ============================================================ */
-        .experience {
-            background: var(--white);
-        }
-        
-        body.dark-mode .experience {
-            background: #111827;
-        }
-        
-        .experience-timeline {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .experience-item {
-            background: var(--light);
-            padding: 2rem;
-            border-radius: var(--radius);
-            border-left: 4px solid var(--primary);
-            transition: var(--transition);
-        }
-        
-        body.dark-mode .experience-item {
-            background: #1f2937;
-            border-left-color: var(--accent);
-        }
-        
-        .experience-item:hover {
-            transform: translateX(8px);
-            box-shadow: var(--shadow);
-        }
-        
-        .experience-item .exp-year {
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        body.dark-mode .experience-item .exp-year {
-            color: var(--accent);
-        }
-        
-        .experience-item h4 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin: 0.5rem 0;
-        }
-        
-        .experience-item p {
-            color: var(--gray);
-            font-size: 0.95rem;
-        }
-        
-        body.dark-mode .experience-item p {
-            color: #c8d8f0;
-        }
-        
-        /* ============================================================
-           CONTACT SECTION
-           ============================================================ */
+           CONTACT
+        ============================================================ */
         .contact {
             background: var(--white);
         }
@@ -1552,7 +1563,7 @@
         
         /* ============================================================
            FOOTER
-           ============================================================ */
+        ============================================================ */
         .footer {
             background: var(--secondary);
             color: #fff;
@@ -1651,7 +1662,7 @@
         
         /* ============================================================
            BACK TO TOP
-           ============================================================ */
+        ============================================================ */
         #backToTop {
             position: fixed;
             bottom: 2.5rem;
@@ -1693,7 +1704,7 @@
         
         /* ============================================================
            SCROLL REVEAL
-           ============================================================ */
+        ============================================================ */
         .fade-up {
             opacity: 0;
             transform: translateY(40px);
@@ -1707,7 +1718,7 @@
         
         /* ============================================================
            RESPONSIVE
-           ============================================================ */
+        ============================================================ */
         @media (max-width: 1024px) {
             .hero-text h1 {
                 font-size: 3.5rem;
@@ -1925,10 +1936,9 @@
     </header>
 
     <!-- ============================================================
-    HERO SECTION
+    HERO SECTION - With Image Fallback
     ============================================================ -->
     <section class="hero" id="home">
-        <!-- Animated Particles -->
         <div class="hero-bg-particles">
             <div class="particle"></div>
             <div class="particle"></div>
@@ -1982,7 +1992,19 @@
                 <div class="profile-wrapper">
                     <div class="profile-ring"></div>
                     <div class="profile-ring"></div>
-                    <img src="https://ui-avatars.com/api/?name=Kabiraj+Bhatt&size=400&background=1e3a6f&color=fff&bold=true&font-size=0.5" alt="Kabiraj Bhatt">
+                    
+                    <!-- PROFILE IMAGE WITH FALLBACK -->
+                    <div class="profile-image-container">
+                        <img 
+                            src="images/profile.jpg" 
+                            alt="Kabiraj Bhatt - Profile Photo"
+                            onerror="this.style.display='none'; this.parentElement.querySelector('.fallback-avatar').style.display='flex';"
+                            loading="lazy"
+                        >
+                        <div class="fallback-avatar">👨‍💻</div>
+                        <div class="fallback-initials">KB</div>
+                    </div>
+                    
                     <span class="floating-badge"><i class="fas fa-code"></i> Web Developer</span>
                     <span class="floating-badge"><i class="fas fa-brain"></i> AI Enthusiast</span>
                     <span class="floating-badge"><i class="fas fa-graduation-cap"></i> Civil Engineer</span>
@@ -1992,18 +2014,26 @@
     </section>
 
     <!-- ============================================================
-    ABOUT SECTION
+    ABOUT SECTION - With Image Fallback
     ============================================================ -->
     <section id="about" class="about">
         <div class="container">
             <div class="section-title">
                 <span class="subtitle">About Me</span>
-                <h2>Know More About <span class="about-highlight">Me</span></h2>
+                <h2>Know More About <span class="highlight">Me</span></h2>
                 <p>Passionate about technology, engineering, and helping others grow</p>
             </div>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="https://ui-avatars.com/api/?name=Kabiraj+Bhatt&size=400&background=1e3a6f&color=fff&bold=true&font-size=0.5" alt="Kabiraj Bhatt">
+                    <div class="about-img-container">
+                        <img 
+                            src="images/profile.jpg" 
+                            alt="Kabiraj Bhatt - About"
+                            onerror="this.style.display='none'; this.parentElement.querySelector('.about-fallback').style.display='flex';"
+                            loading="lazy"
+                        >
+                        <div class="about-fallback">👨‍💻</div>
+                    </div>
                 </div>
                 <div class="about-text">
                     <h3>Hi, I'm <span class="about-highlight">Kabiraj Bhatt</span></h3>
@@ -2054,7 +2084,7 @@
         <div class="container">
             <div class="section-title">
                 <span class="subtitle">My Skills</span>
-                <h2>Technologies I <span class="about-highlight">Work With</span></h2>
+                <h2>Technologies I <span class="highlight">Work With</span></h2>
                 <p>Constantly learning and improving my craft</p>
             </div>
             <div class="skills-grid">
@@ -2109,7 +2139,7 @@
         <div class="container">
             <div class="section-title">
                 <span class="subtitle">Portfolio</span>
-                <h2>Featured <span class="about-highlight">Projects</span></h2>
+                <h2>Featured <span class="highlight">Projects</span></h2>
                 <p>Some of my recent work that I'm proud of</p>
             </div>
             <div class="projects-grid">
@@ -2117,66 +2147,42 @@
                     <span class="project-icon">🌐</span>
                     <h3>Personal Portfolio</h3>
                     <p>Modern responsive personal portfolio website with dark mode and animations.</p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JS</span>
-                    </div>
+                    <div class="project-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
                     <a href="#">View Project →</a>
                 </div>
                 <div class="project-card">
                     <span class="project-icon">📄</span>
                     <h3>CV Maker</h3>
                     <p>Generate professional CVs with PDF export and customizable templates.</p>
-                    <div class="project-tags">
-                        <span>React</span>
-                        <span>PDF</span>
-                        <span>API</span>
-                    </div>
+                    <div class="project-tags"><span>React</span><span>PDF</span><span>API</span></div>
                     <a href="#">View Project →</a>
                 </div>
                 <div class="project-card">
                     <span class="project-icon">📚</span>
                     <h3>Civil Engineering Notes</h3>
                     <p>Free study materials and resources for Diploma Engineering students.</p>
-                    <div class="project-tags">
-                        <span>Content</span>
-                        <span>Education</span>
-                        <span>SEO</span>
-                    </div>
+                    <div class="project-tags"><span>Content</span><span>Education</span><span>SEO</span></div>
                     <a href="#">View Project →</a>
                 </div>
                 <div class="project-card">
                     <span class="project-icon">🧠</span>
                     <h3>AI Tools Directory</h3>
                     <p>Curated collection of useful AI tools and resources for productivity.</p>
-                    <div class="project-tags">
-                        <span>AI</span>
-                        <span>Directory</span>
-                        <span>Tools</span>
-                    </div>
+                    <div class="project-tags"><span>AI</span><span>Directory</span><span>Tools</span></div>
                     <a href="#">View Project →</a>
                 </div>
                 <div class="project-card">
                     <span class="project-icon">🌤️</span>
                     <h3>Weather App</h3>
                     <p>Responsive weather application using OpenWeather API with live updates.</p>
-                    <div class="project-tags">
-                        <span>API</span>
-                        <span>Weather</span>
-                        <span>JS</span>
-                    </div>
+                    <div class="project-tags"><span>API</span><span>Weather</span><span>JS</span></div>
                     <a href="#">View Project →</a>
                 </div>
                 <div class="project-card">
                     <span class="project-icon">📈</span>
                     <h3>Digital Marketing Resources</h3>
                     <p>Comprehensive guides on SEO, social media and marketing strategies.</p>
-                    <div class="project-tags">
-                        <span>Marketing</span>
-                        <span>SEO</span>
-                        <span>Content</span>
-                    </div>
+                    <div class="project-tags"><span>Marketing</span><span>SEO</span><span>Content</span></div>
                     <a href="#">View Project →</a>
                 </div>
             </div>
@@ -2190,7 +2196,7 @@
         <div class="container">
             <div class="section-title">
                 <span class="subtitle">What I Do</span>
-                <h2>Services I <span class="about-highlight">Provide</span></h2>
+                <h2>Services I <span class="highlight">Provide</span></h2>
                 <p>How I can help you achieve your goals</p>
             </div>
             <div class="services-grid">
@@ -2229,43 +2235,13 @@
     </section>
 
     <!-- ============================================================
-    EXPERIENCE SECTION
-    ============================================================ -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-title">
-                <span class="subtitle">Experience</span>
-                <h2>My <span class="about-highlight">Journey</span></h2>
-                <p>Building skills and gaining experience every day</p>
-            </div>
-            <div class="experience-timeline">
-                <div class="experience-item">
-                    <div class="exp-year">2024 - Present</div>
-                    <h4>Web Developer &amp; AI Enthusiast</h4>
-                    <p>Building modern websites, exploring AI tools, and creating digital solutions for clients.</p>
-                </div>
-                <div class="experience-item">
-                    <div class="exp-year">2023 - Present</div>
-                    <h4>Civil Engineering Student</h4>
-                    <p>Pursuing Diploma in Civil Engineering (CTEVT) with hands-on experience in construction projects.</p>
-                </div>
-                <div class="experience-item">
-                    <div class="exp-year">2022 - Present</div>
-                    <h4>Digital Marketing Specialist</h4>
-                    <p>Helping businesses grow through SEO, social media marketing and content strategy.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================
     CONTACT SECTION
     ============================================================ -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-title">
                 <span class="subtitle">Get in Touch</span>
-                <h2>Let's Work <span class="about-highlight">Together</span></h2>
+                <h2>Let's Work <span class="highlight">Together</span></h2>
                 <p>Have a project in mind? Let's create something amazing</p>
             </div>
             <div class="contact-wrapper">
@@ -2352,9 +2328,7 @@
     <script>
         "use strict";
 
-        // ============================================================
         // DOM REFS
-        // ============================================================
         const body = document.body;
         const header = document.getElementById('header');
         const menuBtn = document.getElementById('menuBtn');
@@ -2366,19 +2340,15 @@
         const contactForm = document.getElementById('contactForm');
         const yearElement = document.getElementById('year');
 
-        // ============================================================
         // MOBILE MENU
-        // ============================================================
         if (menuBtn && navbar) {
             const menuIcon = menuBtn.querySelector('i');
-
             menuBtn.addEventListener('click', () => {
                 navbar.classList.toggle('active');
                 const isOpen = navbar.classList.contains('active');
                 menuIcon.className = isOpen ? 'fas fa-times' : 'fas fa-bars';
                 document.body.style.overflow = isOpen ? 'hidden' : '';
             });
-
             navLinks.forEach((link) => {
                 link.addEventListener('click', () => {
                     navbar.classList.remove('active');
@@ -2388,99 +2358,65 @@
             });
         }
 
-        // ============================================================
         // DARK MODE
-        // ============================================================
         const storedTheme = localStorage.getItem('theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
         if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
             body.classList.add('dark-mode');
         }
-
         if (themeToggle) {
             const isDark = body.classList.contains('dark-mode');
-            themeToggle.innerHTML = isDark ?
-                '<i class="fas fa-sun"></i>' :
-                '<i class="fas fa-moon"></i>';
-
+            themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
             themeToggle.addEventListener('click', () => {
                 body.classList.toggle('dark-mode');
                 const dark = body.classList.contains('dark-mode');
-                themeToggle.innerHTML = dark ?
-                    '<i class="fas fa-sun"></i>' :
-                    '<i class="fas fa-moon"></i>';
+                themeToggle.innerHTML = dark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
                 localStorage.setItem('theme', dark ? 'dark' : 'light');
             });
         }
 
-        // ============================================================
         // STICKY HEADER
-        // ============================================================
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 80) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
+            header.classList.toggle('scrolled', window.scrollY > 80);
         });
 
-        // ============================================================
         // BACK TO TOP
-        // ============================================================
         if (backToTop) {
             window.addEventListener('scroll', () => {
-                if (window.scrollY > 500) {
-                    backToTop.classList.add('show');
-                } else {
-                    backToTop.classList.remove('show');
-                }
+                backToTop.classList.toggle('show', window.scrollY > 500);
             });
-
             backToTop.addEventListener('click', () => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         }
 
-        // ============================================================
         // SMOOTH SCROLL
-        // ============================================================
         document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
             anchor.addEventListener('click', function(e) {
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
                 const target = document.querySelector(targetId);
                 if (!target) return;
-
                 e.preventDefault();
                 const headerHeight = header ? header.offsetHeight : 80;
-                const targetPosition = target.getBoundingClientRect().top +
-                    window.scrollY - headerHeight;
-
                 window.scrollTo({
-                    top: targetPosition,
+                    top: target.getBoundingClientRect().top + window.scrollY - headerHeight,
                     behavior: 'smooth'
                 });
-
                 history.pushState(null, null, targetId);
             });
         });
 
-        // ============================================================
         // ACTIVE NAVIGATION
-        // ============================================================
         window.addEventListener('scroll', () => {
             let current = '';
-
             sections.forEach((section) => {
                 const sectionTop = section.offsetTop - 150;
                 const sectionBottom = sectionTop + section.offsetHeight;
-
                 if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
                     current = section.getAttribute('id');
                 }
             });
-
             navLinks.forEach((link) => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === '#' + current) {
@@ -2489,9 +2425,7 @@
             });
         });
 
-        // ============================================================
         // TYPING EFFECT
-        // ============================================================
         const typedText = document.getElementById('typedText');
         if (typedText) {
             const roles = [
@@ -2501,16 +2435,15 @@
                 'Digital Marketer',
                 'Problem Solver'
             ];
-            let roleIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
+            let roleIndex = 0,
+                charIndex = 0,
+                isDeleting = false;
 
             function typeEffect() {
                 const currentRole = roles[roleIndex];
                 const currentText = isDeleting ?
                     currentRole.substring(0, charIndex - 1) :
                     currentRole.substring(0, charIndex + 1);
-
                 typedText.textContent = currentText;
 
                 if (!isDeleting && charIndex === currentRole.length) {
@@ -2521,22 +2454,16 @@
                     setTimeout(typeEffect, 500);
                     return;
                 }
-
                 charIndex = isDeleting ? charIndex - 1 : charIndex + 1;
-                const speed = isDeleting ? 50 : 100;
-                setTimeout(typeEffect, speed);
+                setTimeout(typeEffect, isDeleting ? 50 : 100);
             }
-
             typeEffect();
         }
 
-        // ============================================================
         // SCROLL REVEAL
-        // ============================================================
         const revealElements = document.querySelectorAll(
-            '.skill-card, .project-card, .service-card, .about-info div, .experience-item'
+            '.skill-card, .project-card, .service-card, .about-info div'
         );
-
         if ('IntersectionObserver' in window) {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
@@ -2546,64 +2473,27 @@
                     }
                 });
             }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
-
             revealElements.forEach((el) => observer.observe(el));
-
-            // Also observe sections
-            document.querySelectorAll(
-                '.hero, .about, .skills, .projects, .services, .experience, .contact'
-            ).forEach((el) => {
-                const obs = new IntersectionObserver((entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('visible');
-                            obs.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.1 });
-                obs.observe(el);
-            });
-        } else {
-            // Fallback
-            window.addEventListener('scroll', () => {
-                const trigger = window.innerHeight * 0.85;
-                revealElements.forEach((el) => {
-                    const top = el.getBoundingClientRect().top;
-                    if (top < trigger) {
-                        el.classList.add('fade-up');
-                    }
+            document.querySelectorAll('.hero, .about, .skills, .projects, .services, .contact')
+                .forEach((el) => {
+                    const obs = new IntersectionObserver((entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('visible');
+                                obs.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.1 });
+                    obs.observe(el);
                 });
-            });
-
-            // Initial check
-            setTimeout(() => {
-                revealElements.forEach((el) => {
-                    if (el.getBoundingClientRect().top < window.innerHeight * 0.85) {
-                        el.classList.add('fade-up');
-                    }
-                });
-            }, 100);
         }
 
-        // ============================================================
         // CONTACT FORM
-        // ============================================================
         if (contactForm) {
-            const inputs = contactForm.querySelectorAll('input, textarea');
-
-            // Remove error state on focus
-            inputs.forEach((input) => {
-                input.addEventListener('focus', () => {
-                    input.classList.remove('error');
-                });
-            });
-
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-
                 let isValid = true;
                 const required = this.querySelectorAll('[required]');
-
                 required.forEach((input) => {
                     if (input.value.trim() === '') {
                         input.classList.add('error');
@@ -2612,8 +2502,6 @@
                         input.classList.remove('error');
                     }
                 });
-
-                // Email validation
                 const emailInput = this.querySelector('input[type="email"]');
                 if (emailInput && emailInput.value.trim() !== '') {
                     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -2622,47 +2510,36 @@
                         isValid = false;
                     }
                 }
-
                 if (!isValid) {
-                    // Shake animation
                     this.style.animation = 'shake 0.4s ease';
                     setTimeout(() => { this.style.animation = ''; }, 500);
                     return;
                 }
-
-                // Success state
                 const btn = this.querySelector('.btn');
                 const originalText = btn.innerHTML;
                 btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
                 btn.style.background = '#22c55e';
-                btn.style.boxShadow = '0 8px 20px rgba(34, 197, 94, 0.3)';
                 btn.disabled = true;
-
                 setTimeout(() => {
                     btn.innerHTML = originalText;
                     btn.style.background = '';
-                    btn.style.boxShadow = '';
                     btn.disabled = false;
                     this.reset();
                     this.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
-
-                    // Show success message
                     const successMsg = document.createElement('div');
-                    successMsg.style.cssText = `
-                                background: #22c55e; color: #fff; padding: 1rem;
-                                border-radius: 12px; text-align: center; margin-top: 1rem;
-                                font-weight: 600;
-                            `;
+                    successMsg.style.cssText =
+                        'background:#22c55e;color:#fff;padding:1rem;border-radius:12px;text-align:center;margin-top:1rem;font-weight:600;';
                     successMsg.textContent = '✓ Thank you! Your message has been sent.';
                     this.appendChild(successMsg);
                     setTimeout(() => successMsg.remove(), 5000);
                 }, 2000);
             });
+            contactForm.querySelectorAll('input, textarea').forEach((input) => {
+                input.addEventListener('focus', () => input.classList.remove('error'));
+            });
         }
 
-        // ============================================================
         // STATS COUNTER
-        // ============================================================
         function animateCounter(element, target, suffix = '+') {
             let current = 0;
             const increment = Math.ceil(target / 60);
@@ -2675,11 +2552,9 @@
                 element.textContent = current + suffix;
             }, 30);
         }
-
         const statProjects = document.getElementById('statProjects');
         const statExperience = document.getElementById('statExperience');
         const statClients = document.getElementById('statClients');
-
         if (statProjects && statExperience && statClients) {
             const statsObserver = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
@@ -2694,68 +2569,32 @@
             statsObserver.observe(statProjects);
         }
 
-        // ============================================================
         // COPYRIGHT YEAR
-        // ============================================================
         if (yearElement) {
             yearElement.textContent = new Date().getFullYear();
         }
 
-        // ============================================================
         // KEYBOARD ACCESSIBILITY
-        // ============================================================
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && navbar && navbar.classList.contains('active')) {
                 navbar.classList.remove('active');
                 const icon = menuBtn?.querySelector('i');
-                if (icon) {
-                    icon.className = 'fas fa-bars';
-                }
+                if (icon) icon.className = 'fas fa-bars';
                 document.body.style.overflow = '';
             }
         });
 
-        // ============================================================
         // PREVENT IMAGE DRAG
-        // ============================================================
         document.querySelectorAll('img').forEach((img) => {
             img.setAttribute('draggable', 'false');
-            if (!img.hasAttribute('loading')) {
-                img.setAttribute('loading', 'lazy');
-            }
+            if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
         });
 
-        // ============================================================
-        // ADD SHAKE ANIMATION
-        // ============================================================
-        if (!document.querySelector('#shake-style')) {
-            const style = document.createElement('style');
-            style.id = 'shake-style';
-            style.textContent = `
-                        @keyframes shake {
-                            0%, 100% { transform: translateX(0); }
-                            20% { transform: translateX(-8px); }
-                            40% { transform: translateX(8px); }
-                            60% { transform: translateX(-6px); }
-                            80% { transform: translateX(6px); }
-                        }
-                    `;
-            document.head.appendChild(style);
-        }
-
-        // ============================================================
-        // CONSOLE MESSAGE
-        // ============================================================
+        // CONSOLE
         console.log('%c ✦ Kabiraj Bhatt Portfolio ✦ ',
-            'background:#1e3a6f; color:#fff; font-size:18px; font-weight:bold; padding:10px 20px; border-radius:8px;'
-            );
-        console.log('%c Built with ❤️ using HTML, CSS & JavaScript ',
-            'color:#4a5b6e; font-size:14px;');
-        console.log('%c 🚀 Full-stack Developer | AI Enthusiast | Civil Engineer',
-            'color:#7aa5f0; font-size:13px;');
-
-        console.log('%c 📌 Tip: Replace the avatar image with your own profile.jpg in the /images folder',
-            'color:#8a9bb0; font-size:12px;');
+            'background:#1e3a6f;color:#fff;font-size:18px;font-weight:bold;padding:10px 20px;border-radius:8px;');
+        console.log('%c 📌 Tip: Add your own profile.jpg in the /images folder',
+            'color:#7aa5f0;font-size:13px;');
     </script>
 </body>
 </html>
