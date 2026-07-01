@@ -4,23 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kabi Raj Bhatt | Brother Mart Affiliate | Web Developer | AI Expert</title>
-    <meta name="description" content="Kabi Raj Bhatt - Brother Mart Affiliate Partner. Get Rs 300 OFF with coupon code TOP1. Shop trusted products in Nepal. Web Developer, AI Expert & Digital Marketing Specialist.">
-    <meta name="keywords" content="Brother Mart Affiliate, Kabi Raj Bhatt, Brother Mart Nepal, TOP1 Coupon, Rs 300 Off, Affiliate Marketing, Web Developer Nepal, AI Expert, Digital Marketing">
+    <meta name="description" content="Kabi Raj Bhatt - Brother Mart Affiliate Partner. Get Rs 300 OFF with coupon code TOP1. Shop trusted products in Nepal.">
+    <meta name="keywords" content="Brother Mart Affiliate, Kabi Raj Bhatt, Brother Mart Nepal, TOP1 Coupon, Rs 300 Off, Affiliate Marketing">
     <meta name="author" content="Kabi Raj Bhatt">
     <meta name="robots" content="index,follow">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Kabi Raj Bhatt | Brother Mart Affiliate | Get Rs 300 OFF">
-    <meta property="og:description" content="Brother Mart Affiliate Partner. Use coupon code TOP1 for Rs 300 OFF on your first purchase. Shop trusted products in Nepal.">
+    <meta property="og:description" content="Brother Mart Affiliate Partner. Use coupon code TOP1 for Rs 300 OFF on your first purchase.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kabirajbhatt.com.np">
-    <meta property="og:image" content="https://kabirajbhatt.com.np/images/profile.jpg">
-    <meta property="og:video" content="https://youtu.be/ywxmBgxugEc">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Kabi Raj Bhatt | Brother Mart Affiliate">
-    <meta name="twitter:description" content="Brother Mart Affiliate Partner. Use TOP1 for Rs 300 OFF.">
     
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>">
@@ -35,7 +28,7 @@
     
     <style>
         /* ============================================================
-           PREMIUM PRO ULTIMATE CSS
+           PREMIUM PRO ULTIMATE CSS - FIXED VIDEO
         ============================================================ */
         *,
         *::before,
@@ -48,25 +41,19 @@
         :root {
             --primary: #1e3a6f;
             --primary-light: #2e5a9f;
-            --primary-dark: #0f2347;
             --secondary: #0b1b2f;
             --accent: #7aa5f0;
-            --accent-light: #b8d4f8;
             --gold: #f59e0b;
             --gold-light: #fbbf24;
             --gold-dark: #d97706;
             --gray: #4a5b6e;
-            --gray-light: #8a9bb0;
             --light: #f6f9fc;
             --white: #ffffff;
             --border: #e2e8f0;
             --radius: 24px;
-            --radius-sm: 12px;
-            --radius-lg: 40px;
             --shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
             --shadow-hover: 0 30px 60px rgba(0, 0, 0, 0.08);
             --shadow-gold: 0 20px 40px rgba(245, 158, 11, 0.25);
-            --shadow-gold-lg: 0 30px 60px rgba(245, 158, 11, 0.3);
             --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
@@ -82,7 +69,6 @@
             color: var(--secondary);
             transition: background 0.3s, color 0.3s;
             overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
         }
 
         body.dark-mode {
@@ -116,7 +102,6 @@
             position: relative;
         }
 
-        /* Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -134,7 +119,6 @@
             background: var(--secondary);
         }
 
-        /* Typography */
         .section-title {
             text-align: center;
             margin-bottom: 70px;
@@ -181,19 +165,10 @@
             color: #b0c4e0;
         }
 
-        .section-title .highlight {
-            color: var(--primary);
-        }
-
-        body.dark-mode .section-title .highlight {
-            color: var(--accent);
-        }
-
         .section-title .gold-highlight {
             color: var(--gold);
         }
 
-        /* Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -243,7 +218,6 @@
 
         .btn-gold:hover {
             background: var(--gold-dark);
-            box-shadow: var(--shadow-gold-lg);
             transform: translateY(-4px);
         }
 
@@ -288,11 +262,6 @@
             background: var(--primary);
         }
 
-        .btn-sm {
-            padding: 0.6rem 1.4rem;
-            font-size: 0.85rem;
-        }
-
         .btn-lg {
             padding: 1rem 3rem;
             font-size: 1.1rem;
@@ -306,10 +275,9 @@
             width: 100%;
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
             border-bottom: 1px solid rgba(0, 0, 0, 0.03);
             z-index: 999;
-            transition: background 0.3s, box-shadow 0.3s, border-color 0.3s;
+            transition: background 0.3s, box-shadow 0.3s;
         }
 
         body.dark-mode .header {
@@ -398,7 +366,7 @@
             height: 2.5px;
             background: var(--gold);
             border-radius: 10px;
-            transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: width 0.3s;
         }
 
         .navbar ul li a:hover::after,
@@ -450,7 +418,6 @@
             cursor: pointer;
             color: var(--secondary);
             padding: 0 0.5rem;
-            transition: var(--transition);
         }
 
         body.dark-mode .menu-btn {
@@ -572,10 +539,6 @@
             padding: 0.4rem 1.2rem;
             border-radius: 60px;
             margin-bottom: 1rem;
-        }
-
-        .hero-text .badge i {
-            color: var(--gold);
         }
 
         body.dark-mode .hero-text .badge {
@@ -742,10 +705,6 @@
             border-color: rgba(30, 58, 111, 0.05);
         }
 
-        body.dark-mode .profile-wrapper .profile-ring:nth-child(2) {
-            border-color: rgba(122, 165, 240, 0.03);
-        }
-
         @keyframes ring-pulse {
             0%,
             100% {
@@ -781,8 +740,6 @@
             display: none;
             font-size: 6rem;
             color: #fff;
-            user-select: none;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         .profile-image-container img.error+.fallback-avatar {
@@ -847,7 +804,7 @@
         }
 
         /* ============================================================
-           BROTHER MART AFFILIATE SECTION
+           BROTHER MART SECTION
         ============================================================ */
         .brother-mart {
             background: linear-gradient(145deg, #fef9e7 0%, #fdf4d6 100%);
@@ -938,14 +895,6 @@
 
         body.dark-mode .brother-mart-text p {
             color: #c8d8f0;
-        }
-
-        .brother-mart-text p strong {
-            color: var(--gold-dark);
-        }
-
-        body.dark-mode .brother-mart-text p strong {
-            color: var(--gold-light);
         }
 
         .offer-grid {
@@ -1062,19 +1011,123 @@
         }
 
         /* ============================================================
-           VIDEO SECTION - BROTHER MART CONTENT
+           VIDEO SECTION - FIXED PROPER PLAYBACK
         ============================================================ */
         .videos {
             background: var(--white);
+            padding: 100px 0;
         }
 
         body.dark-mode .videos {
             background: #111827;
         }
 
+        /* Featured Video - Full Width */
+        .video-featured {
+            margin-bottom: 3rem;
+            background: var(--light);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0, 0, 0, 0.02);
+        }
+
+        body.dark-mode .video-featured {
+            background: #1f2937;
+            border-color: #2a405a;
+        }
+
+        .video-featured .video-wrapper {
+            position: relative;
+            padding-bottom: 45%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-featured .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-featured .video-info {
+            padding: 2rem;
+        }
+
+        .video-featured .video-info .video-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gold);
+            background: rgba(245, 158, 11, 0.1);
+            padding: 0.2rem 0.8rem;
+            border-radius: 60px;
+            margin-bottom: 0.5rem;
+        }
+
+        .video-featured .video-info h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        body.dark-mode .video-featured .video-info h3 {
+            color: #f0f4fe;
+        }
+
+        .video-featured .video-info p {
+            color: var(--gray);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        body.dark-mode .video-featured .video-info p {
+            color: #c8d8f0;
+        }
+
+        .video-featured .video-info .affiliate-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .video-featured .video-info .affiliate-links .affiliate-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.5rem;
+            background: var(--gold);
+            color: #fff;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .video-featured .video-info .affiliate-links .affiliate-link:hover {
+            background: var(--gold-dark);
+            transform: translateY(-2px);
+        }
+
+        .video-featured .video-info .affiliate-links .affiliate-link.secondary {
+            background: var(--primary);
+        }
+
+        .video-featured .video-info .affiliate-links .affiliate-link.secondary:hover {
+            background: var(--primary-light);
+        }
+
+        /* Video Grid */
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
 
@@ -1162,13 +1215,38 @@
             color: #fff;
             border-radius: 60px;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             transition: var(--transition);
         }
 
         .video-card .video-info .affiliate-link:hover {
             background: var(--gold-dark);
             transform: translateY(-2px);
+        }
+
+        /* All Videos CTA */
+        .video-cta {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2.5rem;
+            background: rgba(245, 158, 11, 0.05);
+            border-radius: var(--radius);
+            border: 2px dashed var(--gold);
+        }
+
+        .video-cta h3 {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .video-cta p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        body.dark-mode .video-cta p {
+            color: #b0c4e0;
         }
 
         /* ============================================================
@@ -1208,7 +1286,7 @@
         }
 
         .blog-card .blog-image {
-            height: 200px;
+            height: 180px;
             background: linear-gradient(135deg, var(--primary), var(--gold));
             display: flex;
             align-items: center;
@@ -1353,7 +1431,6 @@
             display: none;
             font-size: 5rem;
             color: #fff;
-            user-select: none;
         }
 
         .about-image .about-img-container img.error+.about-fallback {
@@ -1384,14 +1461,6 @@
 
         body.dark-mode .about-text p {
             color: #c8d8f0;
-        }
-
-        .about-text p strong {
-            color: var(--primary);
-        }
-
-        body.dark-mode .about-text p strong {
-            color: var(--accent);
         }
 
         .about-info {
@@ -1444,211 +1513,6 @@
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
-        }
-
-        /* ============================================================
-           SKILLS
-        ============================================================ */
-        .skills {
-            background: var(--light);
-        }
-
-        body.dark-mode .skills {
-            background: #122138;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.8rem;
-        }
-
-        .skill-card {
-            background: var(--white);
-            padding: 2rem 1.5rem;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 1px solid rgba(0, 0, 0, 0.02);
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        .skill-card.fade-up {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        body.dark-mode .skill-card {
-            background: #1f2937;
-            border-color: #2a405a;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .skill-card .skill-icon {
-            font-size: 2rem;
-            margin-bottom: 0.8rem;
-            display: block;
-        }
-
-        .skill-card h3 {
-            font-weight: 600;
-            font-size: 1rem;
-            margin-bottom: 0.8rem;
-            color: var(--secondary);
-        }
-
-        body.dark-mode .skill-card h3 {
-            color: #f0f4fe;
-        }
-
-        .progress {
-            width: 100%;
-            height: 8px;
-            background: #e2e8f0;
-            border-radius: 20px;
-            overflow: hidden;
-        }
-
-        body.dark-mode .progress {
-            background: #2a405a;
-        }
-
-        .progress div {
-            height: 100%;
-            background: linear-gradient(90deg, var(--gold), var(--gold-light));
-            border-radius: 20px;
-            width: 0%;
-            transition: width 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .skill-card.fade-up .progress div {
-            width: var(--progress-width) !important;
-        }
-
-        /* ============================================================
-           PROJECTS
-        ============================================================ */
-        .projects {
-            background: var(--white);
-        }
-
-        body.dark-mode .projects {
-            background: #111827;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: var(--white);
-            padding: 2rem 1.8rem;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 1px solid rgba(0, 0, 0, 0.02);
-            opacity: 0;
-            transform: translateY(30px);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--gold), var(--gold-light));
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .project-card:hover::before {
-            opacity: 1;
-        }
-
-        .project-card.fade-up {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        body.dark-mode .project-card {
-            background: #1f2937;
-            border-color: #2a405a;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .project-card .project-icon {
-            font-size: 2.5rem;
-            margin-bottom: 0.8rem;
-            display: block;
-        }
-
-        .project-card h3 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--secondary);
-            margin-bottom: 0.6rem;
-        }
-
-        body.dark-mode .project-card h3 {
-            color: #f0f4fe;
-        }
-
-        .project-card p {
-            color: var(--gray);
-            margin-bottom: 1.2rem;
-            font-size: 0.95rem;
-        }
-
-        body.dark-mode .project-card p {
-            color: #c8d8f0;
-        }
-
-        .project-card .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.2rem;
-        }
-
-        .project-card .project-tags span {
-            font-size: 0.7rem;
-            font-weight: 500;
-            padding: 0.2rem 0.8rem;
-            background: rgba(245, 158, 11, 0.1);
-            border-radius: 60px;
-            color: var(--gold);
-        }
-
-        .project-card a {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 600;
-            color: var(--gold);
-            border-bottom: 2px solid transparent;
-            transition: var(--transition);
-        }
-
-        .project-card a:hover {
-            border-bottom-color: var(--gold);
-            gap: 0.8rem;
         }
 
         /* ============================================================
@@ -2139,6 +2003,10 @@
             .video-grid {
                 grid-template-columns: 1fr;
             }
+
+            .video-featured .video-wrapper {
+                padding-bottom: 56.25%;
+            }
         }
 
         @media (max-width: 768px) {
@@ -2234,6 +2102,10 @@
             .blog-grid {
                 grid-template-columns: 1fr;
             }
+
+            .video-featured .video-info h3 {
+                font-size: 1.2rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -2294,6 +2166,15 @@
 
             .offer-card {
                 padding: 1.2rem;
+            }
+
+            .video-featured .video-info {
+                padding: 1rem;
+            }
+
+            .video-featured .video-info .affiliate-links .affiliate-link {
+                width: 100%;
+                justify-content: center;
             }
         }
     </style>
@@ -2481,7 +2362,7 @@
     </section>
 
     <!-- ============================================================
-    VIDEO SECTION - BROTHER MART CONTENT
+    VIDEO SECTION - FIXED PROPER PLAYBACK
     ============================================================ -->
     <section id="videos" class="videos">
         <div class="container">
@@ -2491,37 +2372,52 @@
                 <p>Explore Brother Mart products through my video reviews and content</p>
             </div>
 
+            <!-- Featured Video - Full Width -->
+            <div class="video-featured">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/ywxmBgxugEc?t=4" title="Brother Mart Featured Video" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <span class="video-badge"><i class="fas fa-star"></i> Featured Video</span>
+                    <h3>Brother Mart - Trusted Products in Nepal</h3>
+                    <p>Discover amazing products and deals at Brother Mart. Use coupon code <strong style="color:var(--gold);">TOP1</strong> for Rs 300 OFF on your first purchase!</p>
+                    <div class="affiliate-links">
+                        <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link">
+                            <i class="fas fa-shopping-cart"></i> Shop Now
+                        </a>
+                        <a href="https://brother-mart.com/discount/TOP1?ref=KABI" target="_blank" class="affiliate-link secondary">
+                            <i class="fas fa-tag"></i> Use TOP1 - Rs 300 OFF
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Grid -->
             <div class="video-grid">
-                <!-- Main Featured Video -->
-                <div class="video-card" style="grid-column: 1 / -1;">
+                <!-- Video 1 -->
+                <div class="video-card">
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/ywxmBgxugEc?t=4" title="Brother Mart Featured Video" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/kiJYIzCgKsU" title="Brother Mart Video 1" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
-                        <span class="video-badge"><i class="fas fa-star"></i> Featured</span>
-                        <h4>Brother Mart - Trusted Products in Nepal</h4>
-                        <p>Discover amazing products and deals at Brother Mart. Use coupon code <strong>TOP1</strong> for Rs 300 OFF on your first purchase!</p>
-                        <div style="display:flex; flex-wrap:wrap; gap:0.8rem; margin-top:0.5rem;">
-                            <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link">
-                                <i class="fas fa-shopping-cart"></i> Shop Now
-                            </a>
-                            <a href="https://brother-mart.com/discount/TOP1?ref=KABI" target="_blank" class="affiliate-link" style="background:var(--primary);">
-                                <i class="fas fa-tag"></i> Use TOP1
-                            </a>
-                        </div>
+                        <span class="video-badge"><i class="fas fa-play"></i> Product Review</span>
+                        <h4>Amazing Products at Brother Mart</h4>
+                        <p>Check out these amazing products available at Brother Mart with exclusive discounts!</p>
+                        <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link">
+                            <i class="fas fa-shopping-cart"></i> Shop Now                        </a>
                     </div>
                 </div>
 
                 <!-- Video 2 -->
                 <div class="video-card">
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/kiJYIzCgKsU" title="Brother Mart Video 2" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/9PXEz1TT548" title="Brother Mart Video 2" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
                         <span class="video-badge"><i class="fas fa-play"></i> Product Review</span>
-                        <h4>Amazing Products at Brother Mart</h4>
-                        <p>Check out these amazing products available at Brother Mart with exclusive discounts!</p>
-                        <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link" style="font-size:0.75rem; padding:0.3rem 1rem;">
+                        <h4>Best Deals at Brother Mart</h4>
+                        <p>Discover the best deals and discounts at Brother Mart. Save big on your favorite products!</p>
+                        <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link">
                             <i class="fas fa-shopping-cart"></i> Shop Now
                         </a>
                     </div>
@@ -2530,13 +2426,13 @@
                 <!-- Video 3 -->
                 <div class="video-card">
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/9PXEz1TT548" title="Brother Mart Video 3" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/96alXTxqmb8" title="Brother Mart Video 3" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
                         <span class="video-badge"><i class="fas fa-play"></i> Product Review</span>
-                        <h4>Best Deals at Brother Mart</h4>
-                        <p>Discover the best deals and discounts at Brother Mart. Save big on your favorite products!</p>
-                        <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link" style="font-size:0.75rem; padding:0.3rem 1rem;">
+                        <h4>Trusted Products from Brother Mart</h4>
+                        <p>Brother Mart brings you trusted quality products. Shop with confidence today!</p>
+                        <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link">
                             <i class="fas fa-shopping-cart"></i> Shop Now
                         </a>
                     </div>
@@ -2545,13 +2441,13 @@
                 <!-- Video 4 -->
                 <div class="video-card">
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/96alXTxqmb8" title="Brother Mart Video 4" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/wvOBdH-OzRs" title="Brother Mart Video 4" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
                         <span class="video-badge"><i class="fas fa-play"></i> Product Review</span>
-                        <h4>Trusted Products from Brother Mart</h4>
-                        <p>Brother Mart brings you trusted quality products. Shop with confidence today!</p>
-                        <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link" style="font-size:0.75rem; padding:0.3rem 1rem;">
+                        <h4>Brother Mart Shopping Guide</h4>
+                        <p>Complete shopping guide for Brother Mart. Find what you need at the best prices!</p>
+                        <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link">
                             <i class="fas fa-shopping-cart"></i> Shop Now
                         </a>
                     </div>
@@ -2560,13 +2456,13 @@
                 <!-- Video 5 -->
                 <div class="video-card">
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/wvOBdH-OzRs" title="Brother Mart Video 5" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/xj1SgJ7M6vQ" title="Brother Mart Video 5" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
                         <span class="video-badge"><i class="fas fa-play"></i> Product Review</span>
-                        <h4>Brother Mart Shopping Guide</h4>
-                        <p>Complete shopping guide for Brother Mart. Find what you need at the best prices!</p>
-                        <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link" style="font-size:0.75rem; padding:0.3rem 1rem;">
+                        <h4>Top Products at Brother Mart</h4>
+                        <p>Check out the top-selling products at Brother Mart. Quality guaranteed!</p>
+                        <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link">
                             <i class="fas fa-shopping-cart"></i> Shop Now
                         </a>
                     </div>
@@ -2575,48 +2471,31 @@
                 <!-- Video 6 -->
                 <div class="video-card">
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/xj1SgJ7M6vQ" title="Brother Mart Video 6" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <span class="video-badge"><i class="fas fa-play"></i> Product Review</span>
-                        <h4>Top Products at Brother Mart</h4>
-                        <p>Check out the top-selling products at Brother Mart. Quality guaranteed!</p>
-                        <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link" style="font-size:0.75rem; padding:0.3rem 1rem;">
-                            <i class="fas fa-shopping-cart"></i> Shop Now
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Video 7 -->
-                <div class="video-card">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/g6Y065zet_Y?list=PLTZ4rp7GXlQCdq0Go8HcPSHB0rycgP6EU" title="Brother Mart Video 7" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/g6Y065zet_Y?list=PLTZ4rp7GXlQCdq0Go8HcPSHB0rycgP6EU" title="Brother Mart Video 6" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
                         <span class="video-badge"><i class="fas fa-play"></i> Product Review</span>
                         <h4>Brother Mart Product Collection</h4>
                         <p>Complete collection of Brother Mart products. Find your favorite items!</p>
-                        <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link" style="font-size:0.75rem; padding:0.3rem 1rem;">
+                        <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link">
                             <i class="fas fa-shopping-cart"></i> Shop Now
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- All Videos Affiliate Link -->
-            <div style="text-align:center; margin-top:3rem; padding:2rem; background:rgba(245,158,11,0.05); border-radius:var(--radius); border:2px dashed var(--gold);">
-                <h3 style="color:var(--gold); margin-bottom:0.5rem;">
-                    <i class="fas fa-shopping-cart"></i> Shop All Products
-                </h3>
-                <p style="color:var(--gray); margin-bottom:1rem;">
-                    Use coupon code <strong style="color:var(--gold);">TOP1</strong> for Rs 300 OFF on your first purchase!
-                </p>
-                <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="btn btn-gold btn-lg">
-                    <i class="fas fa-shopping-cart"></i> Visit Brother Mart
-                </a>
-                <a href="https://brother-mart.com/discount/TOP1?ref=KABI" target="_blank" class="btn btn-outline btn-lg" style="margin-left:0.5rem;">
-                    <i class="fas fa-tag"></i> Use TOP1
-                </a>
+            <!-- All Videos CTA -->
+            <div class="video-cta">
+                <h3><i class="fas fa-shopping-cart"></i> Shop All Products</h3>
+                <p>Use coupon code <strong style="color:var(--gold);">TOP1</strong> for Rs 300 OFF on your first purchase!</p>
+                <div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center;">
+                    <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="btn btn-gold btn-lg">
+                        <i class="fas fa-shopping-cart"></i> Visit Brother Mart
+                    </a>
+                    <a href="https://brother-mart.com/discount/TOP1?ref=KABI" target="_blank" class="btn btn-outline btn-lg">
+                        <i class="fas fa-tag"></i> Use TOP1
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -2634,9 +2513,7 @@
 
             <div class="blog-grid">
                 <div class="blog-card">
-                    <div class="blog-image">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
+                    <div class="blog-image"><i class="fas fa-shopping-cart"></i></div>
                     <div class="blog-content">
                         <span class="blog-tag">Brother Mart</span>
                         <h4>How to Save Money with Brother Mart Coupon Codes</h4>
@@ -2649,9 +2526,7 @@
                 </div>
 
                 <div class="blog-card">
-                    <div class="blog-image">
-                        <i class="fas fa-gift"></i>
-                    </div>
+                    <div class="blog-image"><i class="fas fa-gift"></i></div>
                     <div class="blog-content">
                         <span class="blog-tag">Shopping</span>
                         <h4>Top 10 Best Selling Products on Brother Mart</h4>
@@ -2664,60 +2539,13 @@
                 </div>
 
                 <div class="blog-card">
-                    <div class="blog-image">
-                        <i class="fas fa-tag"></i>
-                    </div>
+                    <div class="blog-image"><i class="fas fa-tag"></i></div>
                     <div class="blog-content">
                         <span class="blog-tag">Deals</span>
                         <h4>Brother Mart Affiliate Program - Complete Guide</h4>
                         <p>Everything you need to know about the Brother Mart Affiliate Program. How to earn commissions and get started.</p>
                         <div class="blog-meta">
                             <span><i class="fas fa-calendar"></i> June 2026</span>
-                            <span><i class="fas fa-user"></i> Kabi Raj Bhatt</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <i class="fas fa-play"></i>
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-tag">Video</span>
-                        <h4>Brother Mart Product Reviews - What to Buy</h4>
-                        <p>Watch my detailed product reviews on Brother Mart products. Find out which products are worth buying.</p>
-                        <div class="blog-meta">
-                            <span><i class="fas fa-calendar"></i> May 2026</span>
-                            <span><i class="fas fa-user"></i> Kabi Raj Bhatt</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-tag">Tips</span>
-                        <h4>Smart Shopping Tips for Nepali Consumers</h4>
-                        <p>Essential shopping tips for Nepali consumers. Learn how to shop smart and save money on your purchases.</p>
-                        <div class="blog-meta">
-                            <span><i class="fas fa-calendar"></i> May 2026</span>
-                            <span><i class="fas fa-user"></i> Kabi Raj Bhatt</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-tag">Review</span>
-                        <h4>Honest Brother Mart Review - Is It Worth It?</h4>
-                        <p>My honest review of Brother Mart products and services. Find out if Brother Mart is the right choice for you.</p>
-                        <div class="blog-meta">
-                            <span><i class="fas fa-calendar"></i> April 2026</span>
                             <span><i class="fas fa-user"></i> Kabi Raj Bhatt</span>
                         </div>
                     </div>
@@ -2733,7 +2561,7 @@
         <div class="container">
             <div class="section-title">
                 <span class="subtitle">About Me</span>
-                <h2>Know More About <span class="highlight">Me</span></h2>
+                <h2>Know More About <span class="gold-highlight">Me</span></h2>
                 <p>Helping people discover quality products, smart digital solutions, and innovative technology</p>
             </div>
             <div class="about-content">
@@ -2763,30 +2591,12 @@
                     </p>
 
                     <div class="about-info">
-                        <div>
-                            <strong><i class="fas fa-user"></i> Name</strong>
-                            <span>Kabi Raj Bhatt</span>
-                        </div>
-                        <div>
-                            <strong><i class="fas fa-map-pin"></i> Country</strong>
-                            <span>Nepal</span>
-                        </div>
-                        <div>
-                            <strong><i class="fas fa-envelope"></i> Email</strong>
-                            <span>bhattkabiraj466@gmail.com</span>
-                        </div>
-                        <div>
-                            <strong><i class="fas fa-phone"></i> Phone</strong>
-                            <span>+977 9847546823</span>
-                        </div>
-                        <div>
-                            <strong><i class="fas fa-graduation-cap"></i> Education</strong>
-                            <span>BBS Graduate | MBS Candidate</span>
-                        </div>
-                        <div>
-                            <strong><i class="fas fa-briefcase"></i> Focus</strong>
-                            <span style="color:var(--gold);">Brother Mart Affiliate</span>
-                        </div>
+                        <div><strong><i class="fas fa-user"></i> Name</strong><span>Kabi Raj Bhatt</span></div>
+                        <div><strong><i class="fas fa-map-pin"></i> Country</strong><span>Nepal</span></div>
+                        <div><strong><i class="fas fa-envelope"></i> Email</strong><span>bhattkabiraj466@gmail.com</span></div>
+                        <div><strong><i class="fas fa-phone"></i> Phone</strong><span>+977 9847546823</span></div>
+                        <div><strong><i class="fas fa-graduation-cap"></i> Education</strong><span>BBS Graduate | MBS Candidate</span></div>
+                        <div><strong><i class="fas fa-briefcase"></i> Focus</strong><span style="color:var(--gold);">Brother Mart Affiliate</span></div>
                     </div>
 
                     <div class="about-cta">
@@ -2809,39 +2619,39 @@
         <div class="container">
             <div class="section-title">
                 <span class="subtitle">What I Do</span>
-                <h2>Services I <span class="highlight">Provide</span></h2>
+                <h2>Services I <span class="gold-highlight">Provide</span></h2>
                 <p>How I can help you achieve your goals</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
                     <h3>Brother Mart Affiliate</h3>
-                    <p>Discover quality products, smart gadgets, and trusted solutions through Brother Mart Affiliate partnership. Use code <strong>TOP1</strong> for Rs 300 OFF!</p>
+                    <p>Discover quality products through Brother Mart. Use <strong>TOP1</strong> for Rs 300 OFF!</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-globe"></i></div>
                     <h3>Website Development</h3>
-                    <p>Responsive, fast and modern websites using HTML, CSS and JavaScript with best practices.</p>
+                    <p>Responsive, fast and modern websites using HTML, CSS and JavaScript.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-chart-line"></i></div>
                     <h3>SEO Optimization</h3>
-                    <p>Improve visibility and search engine rankings with proven SEO strategies and techniques.</p>
+                    <p>Improve visibility and search engine rankings with proven SEO strategies.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
                     <h3>Digital Marketing</h3>
-                    <p>Social media marketing, content strategy and online promotion to grow your brand.</p>
+                    <p>Social media marketing, content strategy and online promotion.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-robot"></i></div>
                     <h3>AI Consultation</h3>
-                    <p>Guidance on AI tools, automation and productivity solutions for businesses.</p>
+                    <p>Guidance on AI tools, automation and productivity solutions.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-video"></i></div>
                     <h3>Content Creation</h3>
-                    <p>Video reviews, product demonstrations and content creation for Brother Mart products.</p>
+                    <p>Video reviews, product demonstrations and content creation for Brother Mart.</p>
                 </div>
             </div>
         </div>
@@ -2854,7 +2664,7 @@
         <div class="container">
             <div class="section-title">
                 <span class="subtitle">Get in Touch</span>
-                <h2>Let's Work <span class="highlight">Together</span></h2>
+                <h2>Let's Work <span class="gold-highlight">Together</span></h2>
                 <p>Have a project in mind? Let's create something amazing</p>
             </div>
             <div class="contact-wrapper">
@@ -2869,12 +2679,12 @@
                     <p><i class="fas fa-tag"></i> <strong>Coupon Code:</strong> <span style="color:var(--gold);font-weight:700;">TOP1</span> (Rs 300 OFF)</p>
                     <p><i class="fas fa-clock"></i> <strong>Status:</strong> Available for Freelance &amp; Business Collaboration</p>
                     <div class="social-links">
-                        <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <form class="contact-form" id="contactForm" novalidate>
@@ -2919,12 +2729,12 @@
                 <a href="#contact">Contact</a>
             </div>
             <div class="footer-social">
-                <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
             </div>
             <p class="copyright">
                 © <span id="year"></span> Kabi Raj Bhatt &nbsp;|&nbsp; Built with
@@ -2964,7 +2774,7 @@
         const contactForm = document.getElementById('contactForm');
         const yearElement = document.getElementById('year');
 
-        // COPY TO CLIPBOARD FUNCTION
+        // COPY TO CLIPBOARD
         function copyToClipboard(elementId) {
             const element = document.getElementById(elementId);
             const text = element.textContent || element.innerText;
@@ -2976,7 +2786,6 @@
                 btn.style.background = '#22c55e';
                 btn.style.color = '#fff';
                 btn.style.borderColor = '#22c55e';
-
                 setTimeout(() => {
                     btn.innerHTML = originalText;
                     btn.style.background = '';
@@ -2997,7 +2806,6 @@
                 btn.style.background = '#22c55e';
                 btn.style.color = '#fff';
                 btn.style.borderColor = '#22c55e';
-
                 setTimeout(() => {
                     btn.innerHTML = originalText;
                     btn.style.background = '';
@@ -3129,7 +2937,7 @@
 
         // SCROLL REVEAL
         const revealElements = document.querySelectorAll(
-            '.skill-card, .project-card, .service-card, .about-info div, .offer-card, .video-card, .blog-card'
+            '.service-card, .about-info div, .offer-card, .video-card, .blog-card'
         );
         if ('IntersectionObserver' in window) {
             const observer = new IntersectionObserver((entries) => {
@@ -3141,18 +2949,6 @@
                 });
             }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
             revealElements.forEach((el) => observer.observe(el));
-            document.querySelectorAll('.hero, .brother-mart, .videos, .blog, .about, .skills, .services, .contact')
-                .forEach((el) => {
-                    const obs = new IntersectionObserver((entries) => {
-                        entries.forEach((entry) => {
-                            if (entry.isIntersecting) {
-                                entry.target.classList.add('visible');
-                                obs.unobserve(entry.target);
-                            }
-                        });
-                    }, { threshold: 0.1 });
-                    obs.observe(el);
-                });
         }
 
         // CONTACT FORM
@@ -3257,19 +3053,14 @@
             if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
         });
 
-        // CONSOLE
         console.log('%c ✦ Kabi Raj Bhatt - Premium Portfolio ✦ ',
             'background:#1e3a6f;color:#fff;font-size:18px;font-weight:bold;padding:10px 20px;border-radius:8px;');
         console.log('%c 🛒 Brother Mart Affiliate Partner | Web Developer | AI Expert',
             'color:#f59e0b;font-size:14px;font-weight:bold;');
-        console.log('%c 🎫 Use Coupon: TOP1 for Rs 300 OFF',
-            'color:#f59e0b;font-size:13px;font-weight:bold;');
-        console.log('%c 📽️ 7+ Brother Mart Videos Available',
-            'color:#f59e0b;font-size:13px;');
-        console.log('%c 📌 Contact: bhattkabiraj466@gmail.com | +977 9847546823',
-            'color:#4a5b6e;font-size:13px;');
-        console.log('%c 🔗 Referral: https://brother-mart.com/?ref=KABI',
-            'color:#4a5b6e;font-size:12px;');
+        console.log('%c 🎫 Use Coupon: TOP1 for Rs 300 OFF', 'color:#f59e0b;font-size:13px;font-weight:bold;');
+        console.log('%c 📽️ 7+ Brother Mart Videos Available', 'color:#f59e0b;font-size:13px;');
+        console.log('%c 📌 Contact: bhattkabiraj466@gmail.com | +977 9847546823', 'color:#4a5b6e;font-size:13px;');
+        console.log('%c 🔗 Referral: https://brother-mart.com/?ref=KABI', 'color:#4a5b6e;font-size:12px;');
     </script>
 </body>
 </html>
