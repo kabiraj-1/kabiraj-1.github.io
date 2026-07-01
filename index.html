@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kabi Raj Bhatt | Brother Mart Affiliate | Web Developer | AI Expert</title>
-    <meta name="description" content="Kabi Raj Bhatt - Brother Mart Affiliate Partner. Get Rs 300 OFF with coupon code TOP1. Shop trusted products in Nepal.">
-    <meta name="keywords" content="Brother Mart Affiliate, Kabi Raj Bhatt, Brother Mart Nepal, TOP1 Coupon, Rs 300 Off, Affiliate Marketing">
+    <title>Kabi Raj Bhatt | Brother Mart Affiliate</title>
+    <meta name="description" content="Kabi Raj Bhatt - Brother Mart Affiliate Partner. Get Rs 300 OFF with coupon code TOP1.">
+    <meta name="keywords" content="Brother Mart Affiliate, Kabi Raj Bhatt, TOP1 Coupon, Rs 300 Off">
     <meta name="author" content="Kabi Raj Bhatt">
     <meta name="robots" content="index,follow">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Kabi Raj Bhatt | Brother Mart Affiliate | Get Rs 300 OFF">
-    <meta property="og:description" content="Brother Mart Affiliate Partner. Use coupon code TOP1 for Rs 300 OFF on your first purchase.">
+    <meta property="og:title" content="Kabi Raj Bhatt | Brother Mart Affiliate">
+    <meta property="og:description" content="Brother Mart Affiliate Partner. Use TOP1 for Rs 300 OFF.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kabirajbhatt.com.np">
     
@@ -28,7 +28,7 @@
     
     <style>
         /* ============================================================
-           PREMIUM PRO ULTIMATE CSS - FIXED VIDEO
+           COMPLETE CSS - WORKING VERSION
         ============================================================ */
         *,
         *::before,
@@ -47,6 +47,7 @@
             --gold-light: #fbbf24;
             --gold-dark: #d97706;
             --gray: #4a5b6e;
+            --gray-light: #8a9bb0;
             --light: #f6f9fc;
             --white: #ffffff;
             --border: #e2e8f0;
@@ -260,6 +261,11 @@
 
         body.dark-mode .btn-secondary:hover {
             background: var(--primary);
+        }
+
+        .btn-sm {
+            padding: 0.6rem 1.4rem;
+            font-size: 0.85rem;
         }
 
         .btn-lg {
@@ -1011,7 +1017,7 @@
         }
 
         /* ============================================================
-           VIDEO SECTION - FIXED PROPER PLAYBACK
+           VIDEO SECTION - FIXED WORKING VERSION
         ============================================================ */
         .videos {
             background: var(--white);
@@ -1022,7 +1028,7 @@
             background: #111827;
         }
 
-        /* Featured Video - Full Width */
+        /* Featured Video */
         .video-featured {
             margin-bottom: 3rem;
             background: var(--light);
@@ -1127,7 +1133,7 @@
         /* Video Grid */
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 2rem;
         }
 
@@ -1156,6 +1162,7 @@
             height: 0;
             overflow: hidden;
             background: #000;
+            cursor: pointer;
         }
 
         .video-card .video-wrapper iframe {
@@ -1224,7 +1231,7 @@
             transform: translateY(-2px);
         }
 
-        /* All Videos CTA */
+        /* Video CTA */
         .video-cta {
             text-align: center;
             margin-top: 3rem;
@@ -1249,6 +1256,13 @@
             color: #b0c4e0;
         }
 
+        .video-cta .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
         /* ============================================================
            BLOG SECTION
         ============================================================ */
@@ -1262,7 +1276,7 @@
 
         .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
 
@@ -1528,7 +1542,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
@@ -2126,9 +2140,7 @@
                 flex-direction: column;
             }
 
-            .project-card,
-            .service-card,
-            .skill-card {
+            .service-card {
                 padding: 1.5rem;
             }
 
@@ -2362,7 +2374,7 @@
     </section>
 
     <!-- ============================================================
-    VIDEO SECTION - FIXED PROPER PLAYBACK
+    VIDEO SECTION - FULLY WORKING
     ============================================================ -->
     <section id="videos" class="videos">
         <div class="container">
@@ -2372,10 +2384,10 @@
                 <p>Explore Brother Mart products through my video reviews and content</p>
             </div>
 
-            <!-- Featured Video - Full Width -->
+            <!-- Featured Video -->
             <div class="video-featured">
                 <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/ywxmBgxugEc?t=4" title="Brother Mart Featured Video" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/ywxmBgxugEc?autoplay=0&rel=0" title="Brother Mart Featured Video" allowfullscreen></iframe>
                 </div>
                 <div class="video-info">
                     <span class="video-badge"><i class="fas fa-star"></i> Featured Video</span>
@@ -2397,21 +2409,22 @@
                 <!-- Video 1 -->
                 <div class="video-card">
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/kiJYIzCgKsU" title="Brother Mart Video 1" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/kiJYIzCgKsU?autoplay=0&rel=0" title="Amazing Products at Brother Mart" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
                         <span class="video-badge"><i class="fas fa-play"></i> Product Review</span>
                         <h4>Amazing Products at Brother Mart</h4>
                         <p>Check out these amazing products available at Brother Mart with exclusive discounts!</p>
                         <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link">
-                            <i class="fas fa-shopping-cart"></i> Shop Now                        </a>
+                            <i class="fas fa-shopping-cart"></i> Shop Now
+                        </a>
                     </div>
                 </div>
 
                 <!-- Video 2 -->
                 <div class="video-card">
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/9PXEz1TT548" title="Brother Mart Video 2" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/9PXEz1TT548?autoplay=0&rel=0" title="Best Deals at Brother Mart" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
                         <span class="video-badge"><i class="fas fa-play"></i> Product Review</span>
@@ -2426,7 +2439,7 @@
                 <!-- Video 3 -->
                 <div class="video-card">
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/96alXTxqmb8" title="Brother Mart Video 3" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/96alXTxqmb8?autoplay=0&rel=0" title="Trusted Products from Brother Mart" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
                         <span class="video-badge"><i class="fas fa-play"></i> Product Review</span>
@@ -2441,7 +2454,7 @@
                 <!-- Video 4 -->
                 <div class="video-card">
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/wvOBdH-OzRs" title="Brother Mart Video 4" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/wvOBdH-OzRs?autoplay=0&rel=0" title="Brother Mart Shopping Guide" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
                         <span class="video-badge"><i class="fas fa-play"></i> Product Review</span>
@@ -2456,7 +2469,7 @@
                 <!-- Video 5 -->
                 <div class="video-card">
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/xj1SgJ7M6vQ" title="Brother Mart Video 5" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/xj1SgJ7M6vQ?autoplay=0&rel=0" title="Top Products at Brother Mart" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
                         <span class="video-badge"><i class="fas fa-play"></i> Product Review</span>
@@ -2471,7 +2484,7 @@
                 <!-- Video 6 -->
                 <div class="video-card">
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/g6Y065zet_Y?list=PLTZ4rp7GXlQCdq0Go8HcPSHB0rycgP6EU" title="Brother Mart Video 6" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/g6Y065zet_Y?autoplay=0&rel=0" title="Brother Mart Product Collection" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
                         <span class="video-badge"><i class="fas fa-play"></i> Product Review</span>
@@ -2484,11 +2497,11 @@
                 </div>
             </div>
 
-            <!-- All Videos CTA -->
+            <!-- Video CTA -->
             <div class="video-cta">
                 <h3><i class="fas fa-shopping-cart"></i> Shop All Products</h3>
                 <p>Use coupon code <strong style="color:var(--gold);">TOP1</strong> for Rs 300 OFF on your first purchase!</p>
-                <div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center;">
+                <div class="cta-buttons">
                     <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="btn btn-gold btn-lg">
                         <i class="fas fa-shopping-cart"></i> Visit Brother Mart
                     </a>
