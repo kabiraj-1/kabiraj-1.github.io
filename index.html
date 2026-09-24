@@ -1093,7 +1093,339 @@
         }
 
         /* ============================================================
-           VIDEO SECTION - PREMIUM
+           SOCIAL VIDEO SECTION - PREMIUM (Facebook, TikTok, YouTube)
+        ============================================================ */
+        .social-videos {
+            background: var(--white);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body.dark-mode .social-videos {
+            background: #111827;
+        }
+
+        .social-videos::before {
+            content: '🎬';
+            position: absolute;
+            font-size: 25rem;
+            opacity: 0.02;
+            left: -5%;
+            bottom: -10%;
+            pointer-events: none;
+        }
+
+        .social-platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .platform-card {
+            background: var(--light);
+            border-radius: var(--radius);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        body.dark-mode .platform-card {
+            background: #1f2937;
+            border-color: #2a405a;
+        }
+
+        .platform-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .platform-card.facebook:hover {
+            border-color: #1877f2;
+        }
+        .platform-card.tiktok:hover {
+            border-color: #000000;
+        }
+        .platform-card.youtube:hover {
+            border-color: #ff0000;
+        }
+
+        .platform-card .platform-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: #fff;
+            margin: 0 auto 1.5rem;
+            transition: var(--transition);
+        }
+
+        .platform-card.facebook .platform-icon {
+            background: linear-gradient(135deg, #1877f2, #0c5dc7);
+        }
+        .platform-card.tiktok .platform-icon {
+            background: linear-gradient(135deg, #000000, #333333);
+        }
+        .platform-card.youtube .platform-icon {
+            background: linear-gradient(135deg, #ff0000, #cc0000);
+        }
+
+        .platform-card:hover .platform-icon {
+            transform: scale(1.1) rotate(-5deg);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .platform-card h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        body.dark-mode .platform-card h4 {
+            color: #f0f4fe;
+        }
+
+        .platform-card .platform-desc {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.6;
+        }
+
+        body.dark-mode .platform-card .platform-desc {
+            color: #b0c4e0;
+        }
+
+        .platform-card .video-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .platform-card .video-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            background: rgba(0, 0, 0, 0.04);
+            border-radius: 60px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: var(--transition);
+            color: var(--secondary);
+            border: 1px solid transparent;
+        }
+
+        body.dark-mode .platform-card .video-links a {
+            background: rgba(255, 255, 255, 0.05);
+            color: #d4e2fc;
+            border-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .platform-card.facebook .video-links a:hover {
+            background: #1877f2;
+            color: #fff;
+            border-color: #1877f2;
+            transform: translateX(5px);
+        }
+        .platform-card.tiktok .video-links a:hover {
+            background: #000;
+            color: #fff;
+            border-color: #000;
+            transform: translateX(5px);
+        }
+        .platform-card.youtube .video-links a:hover {
+            background: #ff0000;
+            color: #fff;
+            border-color: #ff0000;
+            transform: translateX(5px);
+        }
+
+        .platform-card .video-links a i {
+            font-size: 0.9rem;
+        }
+
+        /* ============================================================
+           PROFILE UPDATES SECTION
+        ============================================================ */
+        .profile-updates {
+            background: linear-gradient(145deg, #fef9e7 0%, #fdf4d6 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body.dark-mode .profile-updates {
+            background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        .profile-updates::before {
+            content: '📋';
+            position: absolute;
+            font-size: 25rem;
+            opacity: 0.03;
+            right: -5%;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .updates-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .updates-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--gold), var(--primary), var(--gold));
+            border-radius: 10px;
+            opacity: 0.3;
+        }
+
+        .update-item {
+            position: relative;
+            padding: 0 0 2.5rem 2.5rem;
+        }
+
+        .update-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0.5rem;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--gold);
+            border: 3px solid var(--light);
+            box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.15);
+            transition: var(--transition);
+        }
+
+        body.dark-mode .update-item::before {
+            border-color: #111827;
+        }
+
+        .update-item:hover::before {
+            transform: scale(1.3);
+            background: var(--gold-light);
+            box-shadow: 0 0 0 8px rgba(245, 158, 11, 0.1);
+        }
+
+        .update-item .update-date {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold);
+            background: rgba(245, 158, 11, 0.1);
+            padding: 0.2rem 1rem;
+            border-radius: 60px;
+            margin-bottom: 0.5rem;
+            border: 1px solid rgba(245, 158, 11, 0.15);
+        }
+
+        .update-item h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 0.3rem;
+        }
+
+        body.dark-mode .update-item h4 {
+            color: #f0f4fe;
+        }
+
+        .update-item p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        body.dark-mode .update-item p {
+            color: #c8d8f0;
+        }
+
+        .update-item p strong {
+            color: var(--gold-dark);
+        }
+
+        body.dark-mode .update-item p strong {
+            color: var(--gold-light);
+        }
+
+        .update-item .update-tag {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 600;
+            padding: 0.15rem 0.8rem;
+            border-radius: 60px;
+            margin-right: 0.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .update-tag.education {
+            background: rgba(30, 58, 111, 0.1);
+            color: var(--primary);
+        }
+        .update-tag.affiliate {
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--gold-dark);
+        }
+        .update-tag.skill {
+            background: rgba(34, 197, 94, 0.1);
+            color: #16a34a;
+        }
+        .update-tag.achievement {
+            background: rgba(139, 92, 246, 0.1);
+            color: #7c3aed;
+        }
+
+        body.dark-mode .update-tag.education {
+            background: rgba(122, 165, 240, 0.15);
+            color: var(--accent-light);
+        }
+        body.dark-mode .update-tag.affiliate {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--gold-light);
+        }
+        body.dark-mode .update-tag.skill {
+            background: rgba(34, 197, 94, 0.15);
+            color: #4ade80;
+        }
+        body.dark-mode .update-tag.achievement {
+            background: rgba(139, 92, 246, 0.15);
+            color: #a78bfa;
+        }
+
+        .profile-updates .updates-cta {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .profile-updates .updates-cta .btn {
+            margin: 0 0.5rem 0.5rem;
+        }
+
+        /* ============================================================
+           VIDEO SECTION (YouTube Featured) - PREMIUM
         ============================================================ */
         .videos {
             background: var(--white);
@@ -2189,6 +2521,10 @@
             .video-featured .video-wrapper {
                 padding-bottom: 56.25%;
             }
+
+            .social-platform-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
@@ -2291,6 +2627,20 @@
                 bottom: 20px;
                 max-width: none;
             }
+
+            .updates-timeline {
+                padding-left: 1.5rem;
+            }
+
+            .update-item {
+                padding-left: 2rem;
+            }
+
+            .update-item::before {
+                left: -1.5rem;
+                width: 12px;
+                height: 12px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -2360,6 +2710,16 @@
                 max-width: 220px;
                 margin: 0 auto;
             }
+
+            .platform-card {
+                padding: 1.5rem 1.2rem;
+            }
+
+            .profile-updates .updates-cta .btn {
+                width: 100%;
+                justify-content: center;
+                margin: 0.3rem 0;
+            }
         }
     </style>
 </head>
@@ -2377,7 +2737,8 @@
                 <ul>
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#brother-mart">Brother Mart</a></li>
-                    <li><a href="#videos">Videos</a></li>
+                    <li><a href="#social-videos">Videos</a></li>
+                    <li><a href="#updates">Updates</a></li>
                     <li><a href="#blog">Blog</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
@@ -2424,7 +2785,7 @@
                     <a href="#brother-mart" class="btn btn-gold btn-lg">
                         <i class="fas fa-shopping-cart"></i> Shop with Rs 300 OFF
                     </a>
-                    <a href="#videos" class="btn btn-outline">
+                    <a href="#social-videos" class="btn btn-outline">
                         <i class="fas fa-play"></i> Watch Videos
                     </a>
                     <a href="#contact" class="btn btn-secondary">
@@ -2538,135 +2899,135 @@
     </section>
 
     <!-- ============================================================
-    VIDEO SECTION
+    SOCIAL VIDEO SECTION (Facebook, TikTok, YouTube)
     ============================================================ -->
-    <section id="videos" class="videos">
+    <section id="social-videos" class="social-videos">
         <div class="container">
             <div class="section-title" data-aos="fade-up" data-aos-duration="800">
-                <span class="subtitle"><i class="fas fa-play"></i> Video Content</span>
-                <h2>Brother Mart <span class="gold-highlight">Videos</span></h2>
-                <p>Explore Brother Mart products through my video reviews</p>
+                <span class="subtitle"><i class="fas fa-video"></i> Social Videos</span>
+                <h2>Watch My <span class="gold-highlight">Video Content</span></h2>
+                <p>Find my latest product reviews, tech tips, and Brother Mart deals on your favorite platforms</p>
             </div>
 
-            <!-- Featured Video -->
-            <div class="video-featured" data-aos="fade-up" data-aos-duration="800">
-                <div class="video-wrapper">
-                    <iframe src="https://www.youtube.com/embed/ywxmBgxugEc?autoplay=0&rel=0" title="Brother Mart Featured" allowfullscreen></iframe>
-                </div>
-                <div class="video-info">
-                    <span class="video-badge"><i class="fas fa-star"></i> Featured Video</span>
-                    <h3>Brother Mart - Trusted Products in Nepal</h3>
-                    <p>Discover amazing products and deals at Brother Mart. Use coupon code <strong style="color:var(--gold);">TOP1</strong> for Rs 300 OFF!</p>
-                    <div class="affiliate-links">
-                        <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link">
-                            <i class="fas fa-shopping-cart"></i> Shop Now
+            <div class="social-platform-grid">
+                <!-- Facebook -->
+                <div class="platform-card facebook" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                    <div class="platform-icon"><i class="fab fa-facebook-f"></i></div>
+                    <h4>Facebook</h4>
+                    <p class="platform-desc">Watch my latest Facebook videos and product showcases</p>
+                    <div class="video-links">
+                        <a href="https://www.facebook.com/share/1HqKUh1GBk/" target="_blank">
+                            <i class="fab fa-facebook-f"></i> Visit My Facebook Page
                         </a>
-                        <a href="https://brother-mart.com/discount/TOP1?ref=KABI" target="_blank" class="affiliate-link secondary">
-                            <i class="fas fa-tag"></i> Use TOP1 - Rs 300 OFF
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Video Grid -->
-            <div class="video-grid">
-                <div class="video-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/kiJYIzCgKsU?autoplay=0&rel=0" title="Amazing Products" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <span class="video-badge"><i class="fas fa-play"></i> Product Review</span>
-                        <h4>Amazing Products at Brother Mart</h4>
-                        <p>Check out these amazing products available at Brother Mart with exclusive discounts!</p>
-                        <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link">
-                            <i class="fas fa-shopping-cart"></i> Shop Now
+                        <a href="https://www.facebook.com/share/v/1HqKUh1GBk/" target="_blank">
+                            <i class="fas fa-play"></i> Watch Featured Video
                         </a>
                     </div>
                 </div>
 
-                <div class="video-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/9PXEz1TT548?autoplay=0&rel=0" title="Best Deals" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <span class="video-badge"><i class="fas fa-play"></i> Product Review</span>
-                        <h4>Best Deals at Brother Mart</h4>
-                        <p>Discover the best deals and discounts at Brother Mart. Save big on your favorite products!</p>
-                        <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link">
-                            <i class="fas fa-shopping-cart"></i> Shop Now
+                <!-- TikTok -->
+                <div class="platform-card tiktok" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                    <div class="platform-icon"><i class="fab fa-tiktok"></i></div>
+                    <h4>TikTok</h4>
+                    <p class="platform-desc">Short, engaging videos about products and deals</p>
+                    <div class="video-links">
+                        <a href="https://www.tiktok.com/@kabiraj__" target="_blank">
+                            <i class="fab fa-tiktok"></i> Visit My TikTok Profile
+                        </a>
+                        <a href="https://www.tiktok.com/@kabiraj__/video/1234567890" target="_blank">
+                            <i class="fas fa-play"></i> Watch Latest TikTok
                         </a>
                     </div>
                 </div>
 
-                <div class="video-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/96alXTxqmb8?autoplay=0&rel=0" title="Trusted Products" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <span class="video-badge"><i class="fas fa-play"></i> Product Review</span>
-                        <h4>Trusted Products from Brother Mart</h4>
-                        <p>Brother Mart brings you trusted quality products. Shop with confidence today!</p>
-                        <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link">
-                            <i class="fas fa-shopping-cart"></i> Shop Now
+                <!-- YouTube -->
+                <div class="platform-card youtube" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                    <div class="platform-icon"><i class="fab fa-youtube"></i></div>
+                    <h4>YouTube</h4>
+                    <p class="platform-desc">In-depth reviews, tutorials, and unboxing videos</p>
+                    <div class="video-links">
+                        <a href="https://www.youtube.com/@kabirajbhatt-1" target="_blank">
+                            <i class="fab fa-youtube"></i> Visit My YouTube Channel
                         </a>
-                    </div>
-                </div>
-
-                <div class="video-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/wvOBdH-OzRs?autoplay=0&rel=0" title="Shopping Guide" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <span class="video-badge"><i class="fas fa-play"></i> Product Review</span>
-                        <h4>Brother Mart Shopping Guide</h4>
-                        <p>Complete shopping guide for Brother Mart. Find what you need at the best prices!</p>
-                        <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link">
-                            <i class="fas fa-shopping-cart"></i> Shop Now
-                        </a>
-                    </div>
-                </div>
-
-                <div class="video-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/xj1SgJ7M6vQ?autoplay=0&rel=0" title="Top Products" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <span class="video-badge"><i class="fas fa-play"></i> Product Review</span>
-                        <h4>Top Products at Brother Mart</h4>
-                        <p>Check out the top-selling products at Brother Mart. Quality guaranteed!</p>
-                        <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link">
-                            <i class="fas fa-shopping-cart"></i> Shop Now
-                        </a>
-                    </div>
-                </div>
-
-                <div class="video-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/g6Y065zet_Y?autoplay=0&rel=0" title="Product Collection" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <span class="video-badge"><i class="fas fa-play"></i> Product Review</span>
-                        <h4>Brother Mart Product Collection</h4>
-                        <p>Complete collection of Brother Mart products. Find your favorite items!</p>
-                        <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="affiliate-link">
-                            <i class="fas fa-shopping-cart"></i> Shop Now
+                        <a href="https://www.youtube.com/watch?v=ywxmBgxugEc" target="_blank">
+                            <i class="fas fa-play"></i> Watch Featured Video
                         </a>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Video CTA -->
-            <div class="video-cta" data-aos="fade-up" data-aos-duration="800">
-                <h3><i class="fas fa-shopping-cart"></i> Shop All Products</h3>
-                <p>Use coupon code <strong style="color:var(--gold);">TOP1</strong> for Rs 300 OFF on your first purchase!</p>
-                <div class="cta-buttons">
-                    <a href="https://brother-mart.com/?ref=KABI" target="_blank" class="btn btn-gold btn-lg">
-                        <i class="fas fa-shopping-cart"></i> Visit Brother Mart
-                    </a>
-                    <a href="https://brother-mart.com/discount/TOP1?ref=KABI" target="_blank" class="btn btn-outline btn-lg">
-                        <i class="fas fa-tag"></i> Use TOP1
-                    </a>
+    <!-- ============================================================
+    PROFILE UPDATES SECTION
+    ============================================================ -->
+    <section id="updates" class="profile-updates">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up" data-aos-duration="800">
+                <span class="subtitle"><i class="fas fa-bullhorn"></i> Profile Updates</span>
+                <h2>Latest <span class="gold-highlight">Updates</span></h2>
+                <p>Stay updated with my latest news, achievements, and milestones</p>
+            </div>
+
+            <div class="updates-timeline">
+                <div class="update-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                    <span class="update-date">June 2026</span>
+                    <h4>🎉 New Brother Mart Affiliate Partner</h4>
+                    <p>
+                        I'm excited to announce that I've become an <strong>official Brother Mart Affiliate Partner</strong>! 
+                        Use my coupon code <strong>TOP1</strong> to get <strong>Rs 300 OFF</strong> on your first purchase. 
+                        <span class="update-tag affiliate">Affiliate</span>
+                    </p>
                 </div>
+
+                <div class="update-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                    <span class="update-date">May 2026</span>
+                    <h4>📚 MBS Final Semester Completed</h4>
+                    <p>
+                        Successfully completed the final semester examination of <strong>MBS (Master of Business Studies)</strong>. 
+                        Looking forward to applying my knowledge in digital marketing and business strategy.
+                        <span class="update-tag education">Education</span>
+                    </p>
+                </div>
+
+                <div class="update-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                    <span class="update-date">April 2026</span>
+                    <h4>💻 New Portfolio Website Launched</h4>
+                    <p>
+                        Launched my completely redesigned premium portfolio website with dark mode, 
+                        video integration, and enhanced user experience. Built with modern HTML, CSS, and JavaScript.
+                        <span class="update-tag achievement">Achievement</span>
+                    </p>
+                </div>
+
+                <div class="update-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+                    <span class="update-date">March 2026</span>
+                    <h4>🤖 AI & Digital Marketing Certification</h4>
+                    <p>
+                        Completed advanced training in <strong>AI-powered digital marketing</strong> and automation tools. 
+                        Now offering AI consultation services to help businesses grow.
+                        <span class="update-tag skill">Skill</span>
+                    </p>
+                </div>
+
+                <div class="update-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+                    <span class="update-date">January 2026</span>
+                    <h4>🎓 BBS Graduation Completed</h4>
+                    <p>
+                        Graduated with a <strong>Bachelor of Business Studies (BBS)</strong> degree. 
+                        Grateful for the journey and excited for the next chapter.
+                        <span class="update-tag education">Education</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="updates-cta" data-aos="fade-up" data-aos-duration="800">
+                <a href="#contact" class="btn btn-gold">
+                    <i class="fas fa-envelope"></i> Get in Touch
+                </a>
+                <a href="https://wa.me/9779847546823" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Me
+                </a>
             </div>
         </div>
     </section>
@@ -2891,7 +3252,8 @@
             <div class="footer-links">
                 <a href="#home">Home</a>
                 <a href="#brother-mart">Brother Mart</a>
-                <a href="#videos">Videos</a>
+                <a href="#social-videos">Videos</a>
+                <a href="#updates">Updates</a>
                 <a href="#blog">Blog</a>
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
