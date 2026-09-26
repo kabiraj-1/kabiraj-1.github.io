@@ -556,14 +556,43 @@ section{padding:110px 0;position:relative}
           </div>
         </div>
       </div>
+
       <div class="timeline" data-reveal data-reveal-delay="2">
         <h3 class="col-title gold"><span class="ic"><i class="fas fa-graduation-cap"></i></span> Education</h3>
         <div class="tl-items">
-          <div class="tl-item gold"><div class="tl-date">Running · 4th Semester</div><h4>Master of Business Studies (MBS)</h4><div class="tl-org">Tribhuvan University (TU)</div></div>
-          <div class="tl-item gold"><div class="tl-date">Completed 2023 · 2080 B.S.</div><h4>Bachelor of Business Studies (BBS)</h4><div class="tl-org">Krishna Baijnath Multiple Campus, TU</div><p>46.70% · Second Division</p></div>
-          <div class="tl-item gold"><div class="tl-date">Final Exam Completed</div><h4>Diploma in Civil Engineering</h4><div class="tl-org">Shuklaphanta Polytechnic Institute, CTEVT</div><p>Result pending / as applicable</p></div>
-          <div class="tl-item gold"><div class="tl-date">2073 B.S. · 51.20%</div><h4>+2 / Higher Secondary Education</h4><div class="tl-org">Chandra Surya Bal Vidyalaya</div><p>Second Division</p></div>
-          <div class="tl-item gold"><div class="tl-date">2069 B.S. · First Division</div><h4>SLC</h4><div class="tl-org">Baijnath Higher Secondary School</div></div>
+          <div class="tl-item gold">
+            <div class="tl-date">Running · 4th Semester</div>
+            <h4>Master of Business Studies (MBS)</h4>
+            <div class="tl-org">Tribhuvan University (TU)</div>
+          </div>
+
+          <div class="tl-item gold">
+            <div class="tl-date">Completed 2023 · 2080 B.S.</div>
+            <h4>Bachelor of Business Studies (BBS)</h4>
+            <div class="tl-org">Krishna Baijnath Multiple Campus, TU</div>
+            <p>Second Division</p>
+          </div>
+
+          <div class="tl-item gold">
+            <div class="tl-date">Final Exam Completed</div>
+            <h4>Diploma in Civil Engineering</h4>
+            <div class="tl-org">Shuklaphanta Polytechnic Institute, CTEVT</div>
+            <p>Result pending / as applicable</p>
+          </div>
+
+          <div class="tl-item gold">
+            <div class="tl-date">2073 B.S.</div>
+            <h4>+2 / Higher Secondary Education</h4>
+            <div class="tl-org">Chandra Surya Bal Vidyalaya</div>
+            <p>Second Division</p>
+          </div>
+
+          <div class="tl-item gold">
+            <div class="tl-date">2069 B.S.</div>
+            <h4>SLC</h4>
+            <div class="tl-org">Baijnath Higher Secondary School</div>
+            <p>First Division</p>
+          </div>
         </div>
       </div>
     </div>
@@ -921,11 +950,10 @@ toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smoot
 
 /* ============================================================
    POSTS MODULE  →  social/post.html
-   ------------------------------------------------------------
-   ✅ FIXED: Demo posts render INSTANTLY (never stuck on "Loading")
-   ✅ Then tries to fetch social/post.html with a 3s timeout
-   ✅ If fetch succeeds → replaces with real posts
-   ✅ If fetch fails   → keeps demo posts (silent fallback)
+   - Demo posts render INSTANTLY (never stuck on "Loading")
+   - Then tries to fetch social/post.html with 3s timeout
+   - If fetch succeeds → replaces with real posts
+   - If fetch fails   → keeps demo posts (silent fallback)
    ============================================================ */
 const POSTS_ENDPOINT = 'social/post.html';
 let allPosts = [];
@@ -935,7 +963,6 @@ const grid = document.getElementById('postsGrid');
 const filters = document.getElementById('postsFilters');
 const refreshBtn = document.getElementById('postsRefresh');
 
-/* ---- Demo posts (rendered immediately) ---- */
 const DEMO_POSTS = [
   {
     id: 1, platform: 'facebook', author: 'Kabi Raj Bhatt', avatar: 'KRB', date: '2 days ago',
@@ -992,7 +1019,6 @@ const PLATFORM_ICON = {
   youtube: 'fab fa-youtube', instagram: 'fab fa-instagram', website: 'fas fa-globe'
 };
 
-/* ---- Render posts ---- */
 function renderPosts() {
   const list = activeFilter === 'all' ? allPosts : allPosts.filter(p => p.platform === activeFilter);
   if (!list.length) {
@@ -1029,7 +1055,6 @@ function renderPosts() {
   }).join('');
 }
 
-/* ---- Try loading real posts from social/post.html ---- */
 async function tryLoadRealPosts() {
   try {
     const controller = new AbortController();
@@ -1051,7 +1076,6 @@ async function tryLoadRealPosts() {
   }
 }
 
-/* ---- Filters ---- */
 filters.addEventListener('click', e => {
   const btn = e.target.closest('.filter-chip');
   if (!btn) return;
@@ -1061,7 +1085,6 @@ filters.addEventListener('click', e => {
   renderPosts();
 });
 
-/* ---- Refresh ---- */
 refreshBtn.addEventListener('click', async () => {
   refreshBtn.classList.add('spinning');
   await tryLoadRealPosts();
@@ -1069,7 +1092,7 @@ refreshBtn.addEventListener('click', async () => {
   showToast('Feed refreshed!', 'success');
 });
 
-/* ---- INIT: render demo immediately, then try real fetch in background ---- */
+/* INIT: render demo immediately, then try real fetch */
 allPosts = DEMO_POSTS;
 renderPosts();
 tryLoadRealPosts();
