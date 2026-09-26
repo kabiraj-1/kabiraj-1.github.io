@@ -9,82 +9,45 @@
 <meta name="author" content="Kabi Raj Bhatt" />
 <meta property="og:title" content="Kabi Raj Bhatt — Administrative · Digital · Affiliate" />
 <meta property="og:description" content="Administrative, Data Management, Digital Services & Brother Mart Affiliate Partner." />
-<meta property="og:image" content="https://kabirajbhatt.com.np/images/profile.jpg" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
-
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
 <style>
-/* ============ RESET & VARIABLES ============ */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#05070f;
-  --surface:rgba(255,255,255,0.04);
-  --surface-2:rgba(255,255,255,0.07);
-  --border:rgba(255,255,255,0.09);
-  --border-2:rgba(255,255,255,0.16);
-  --text:#eef2ff;
-  --text-dim:#8b97b8;
-  --text-mid:#b8c2dd;
-  --violet:#7c5cff;
-  --violet-2:#a78bfa;
-  --cyan:#22d3ee;
-  --pink:#f472b6;
-  --gold:#fbbf24;
-  --gold-2:#f59e0b;
-  --green:#34d399;
+  --bg:#05070f;--surface:rgba(255,255,255,0.04);--surface-2:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.09);--border-2:rgba(255,255,255,0.16);
+  --text:#eef2ff;--text-dim:#8b97b8;--text-mid:#b8c2dd;
+  --violet:#7c5cff;--violet-2:#a78bfa;--cyan:#22d3ee;--pink:#f472b6;
+  --gold:#fbbf24;--gold-2:#f59e0b;--green:#34d399;
   --grad:linear-gradient(135deg,#7c5cff 0%,#22d3ee 50%,#f472b6 100%);
   --grad-gold:linear-gradient(135deg,#fbbf24,#f59e0b);
-  --radius:22px;
-  --radius-lg:32px;
-  --radius-sm:14px;
+  --radius:22px;--radius-lg:32px;--radius-sm:14px;
   --ease:cubic-bezier(.19,1,.22,1);
   --shadow-glow:0 20px 60px -20px rgba(124,92,255,.45);
-  --font-display:'Syne',sans-serif;
-  --font-body:'Inter',sans-serif;
-  --font-mono:'JetBrains Mono',monospace;
+  --font-display:'Syne',sans-serif;--font-body:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;
 }
 html{scroll-behavior:smooth;scroll-padding-top:100px}
-body{
-  font-family:var(--font-body);background:var(--bg);color:var(--text);
-  line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;position:relative;
-}
-body::before{
-  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
-  background:
-    radial-gradient(800px 500px at 15% -5%,rgba(124,92,255,.18),transparent 60%),
-    radial-gradient(700px 500px at 90% 10%,rgba(34,211,238,.12),transparent 60%),
-    radial-gradient(700px 600px at 50% 100%,rgba(244,114,182,.10),transparent 60%);
-}
-body::after{
-  content:'';position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.5;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
-}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;position:relative}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(800px 500px at 15% -5%,rgba(124,92,255,.18),transparent 60%),radial-gradient(700px 500px at 90% 10%,rgba(34,211,238,.12),transparent 60%),radial-gradient(700px 600px at 50% 100%,rgba(244,114,182,.10),transparent 60%)}
+body::after{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.5;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E")}
 main,header,footer,.modal,.toast,.cursor,.cursor-dot{position:relative;z-index:2}
 a{color:inherit;text-decoration:none;transition:.3s var(--ease)}
-ul{list-style:none}
-img{max-width:100%;display:block}
+ul{list-style:none}img{max-width:100%;display:block}
 button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
 input,textarea,select{font-family:inherit}
 ::selection{background:var(--violet);color:#fff}
-::-webkit-scrollbar{width:10px}
-::-webkit-scrollbar-track{background:#05070f}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:#05070f}
 ::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--violet),var(--cyan));border-radius:10px;border:2px solid #05070f}
-
 .container{width:min(1280px,92%);margin:0 auto}
 section{padding:110px 0;position:relative}
-
-/* ============ CURSOR ============ */
 .cursor,.cursor-dot{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%}
 .cursor{width:38px;height:38px;border:1.5px solid rgba(167,139,250,.6);margin:-19px 0 0 -19px;backdrop-filter:blur(2px);transition:transform .12s ease-out,width .3s,height .3s}
 .cursor-dot{width:5px;height:5px;background:var(--cyan);margin:-2.5px 0 0 -2.5px;box-shadow:0 0 12px var(--cyan)}
 .cursor.hover{width:70px;height:70px;margin:-35px 0 0 -35px;border-color:var(--gold);background:rgba(251,191,36,.08)}
 @media (hover:none),(max-width:900px){.cursor,.cursor-dot{display:none}}
-
-/* ============ PRELOADER ============ */
 .preloader{position:fixed;inset:0;z-index:10000;background:#05070f;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:26px;transition:opacity .7s,visibility .7s}
 .preloader.done{opacity:0;visibility:hidden}
 .loader-ring{width:74px;height:74px;border-radius:50%;border:3px solid rgba(255,255,255,.06);border-top-color:var(--violet);border-right-color:var(--cyan);animation:spin 1s linear infinite}
@@ -93,17 +56,10 @@ section{padding:110px 0;position:relative}
 .loader-bar{width:200px;height:2px;background:rgba(255,255,255,.06);border-radius:2px;overflow:hidden}
 .loader-bar span{display:block;height:100%;width:0;background:var(--grad);animation:load 1.4s var(--ease) forwards}
 @keyframes load{to{width:100%}}
-
-/* ============ HEADER ============ */
 .header{position:fixed;top:0;left:0;width:100%;z-index:900;padding:18px 0;transition:.5s var(--ease)}
 .header.scrolled{padding:10px 0}
 .header .container{display:flex;align-items:center;justify-content:space-between}
-.nav-shell{
-  display:flex;align-items:center;justify-content:space-between;width:100%;
-  padding:12px 14px 12px 24px;border-radius:100px;
-  background:rgba(12,16,28,.55);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);
-  border:1px solid var(--border);box-shadow:0 10px 40px rgba(0,0,0,.4);transition:.5s var(--ease);
-}
+.nav-shell{display:flex;align-items:center;justify-content:space-between;width:100%;padding:12px 14px 12px 24px;border-radius:100px;background:rgba(12,16,28,.55);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border:1px solid var(--border);box-shadow:0 10px 40px rgba(0,0,0,.4);transition:.5s var(--ease)}
 .header.scrolled .nav-shell{background:rgba(8,11,20,.85);border-color:var(--border-2)}
 .logo{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:800;font-size:1.4rem;letter-spacing:-.5px}
 .logo-mark{width:38px;height:38px;border-radius:12px;background:var(--grad);display:grid;place-items:center;font-size:.95rem;color:#fff;font-weight:900;box-shadow:0 6px 20px rgba(124,92,255,.5);position:relative;overflow:hidden}
@@ -129,9 +85,6 @@ section{padding:110px 0;position:relative}
 .btn-ghost{background:var(--surface);border:1px solid var(--border-2);color:var(--text)}
 .btn-ghost:hover{background:var(--surface-2);border-color:var(--violet);transform:translateY(-3px)}
 .btn-lg{padding:1rem 2.2rem;font-size:.98rem}
-.btn-sm{padding:.55rem 1.2rem;font-size:.8rem}
-
-/* ============ HERO ============ */
 .hero{padding-top:190px;padding-bottom:70px;min-height:100vh;display:flex;align-items:center}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
 .status-pill{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border-radius:100px;background:var(--surface);border:1px solid var(--border);font-size:.78rem;color:var(--text-mid);margin-bottom:26px;font-weight:500}
@@ -153,8 +106,6 @@ section{padding:110px 0;position:relative}
 .stat-card:hover{background:var(--surface-2);border-color:var(--border-2);transform:translateY(-5px)}
 .stat-num{font-family:var(--font-display);font-size:1.6rem;font-weight:800;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .stat-lbl{font-size:.68rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:1.5px;margin-top:6px;font-weight:600}
-
-/* Hero Visual */
 .hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
 .orb{position:relative;width:min(400px,82vw);aspect-ratio:1;border-radius:50%;display:grid;place-items:center}
 .orb::before{content:'';position:absolute;inset:-4px;border-radius:50%;background:conic-gradient(from 0deg,var(--violet),var(--cyan),var(--pink),var(--gold),var(--violet));animation:spin 8s linear infinite;filter:blur(2px);mask:radial-gradient(farthest-side,transparent calc(100% - 6px),#000 calc(100% - 5px));-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 6px),#000 calc(100% - 5px))}
@@ -175,8 +126,6 @@ section{padding:110px 0;position:relative}
 .orbit-badge.b2 i{color:var(--gold)}
 .orbit-badge.b3 i{color:var(--pink)}
 @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
-
-/* ============ MARQUEE ============ */
 .marquee{padding:24px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;background:rgba(255,255,255,.015);position:relative}
 .marquee::before,.marquee::after{content:'';position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none}
 .marquee::before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}
@@ -187,58 +136,31 @@ section{padding:110px 0;position:relative}
 .marquee-item i{color:var(--violet);font-size:.95rem}
 .marquee-item:nth-child(even) i{color:var(--cyan)}
 @keyframes scrollX{to{transform:translateX(-50%)}}
-
-/* ============ SECTION HEAD ============ */
 .section-head{text-align:center;margin-bottom:60px}
 .section-tag{display:inline-flex;align-items:center;gap:8px;padding:7px 18px;border-radius:100px;background:var(--surface);border:1px solid var(--border);font-size:.72rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--violet-2);margin-bottom:16px}
 .section-tag i{color:var(--gold)}
 .section-head h2{font-family:var(--font-display);font-size:clamp(1.9rem,4vw,3rem);font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:14px}
 .section-head h2 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .section-head p{color:var(--text-mid);max-width:620px;margin:0 auto;font-size:1rem}
-
-/* ============ POSTS / SOCIAL MODULE ============ */
 .posts-section{background:radial-gradient(ellipse at 50% 0%,rgba(34,211,238,.06),transparent 60%)}
-.posts-toolbar{
-  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
-  margin-bottom:32px;padding:16px 22px;border-radius:100px;
-  background:var(--surface);border:1px solid var(--border);backdrop-filter:blur(14px);
-}
+.posts-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:32px;padding:16px 22px;border-radius:100px;background:var(--surface);border:1px solid var(--border);backdrop-filter:blur(14px)}
 .posts-filters{display:flex;gap:6px;flex-wrap:wrap}
-.filter-chip{
-  padding:8px 16px;border-radius:100px;font-size:.78rem;font-weight:600;
-  background:transparent;border:1px solid var(--border);color:var(--text-mid);
-  transition:.3s var(--ease);cursor:pointer;
-}
+.filter-chip{padding:8px 16px;border-radius:100px;font-size:.78rem;font-weight:600;background:transparent;border:1px solid var(--border);color:var(--text-mid);transition:.3s var(--ease);cursor:pointer}
 .filter-chip:hover{border-color:var(--border-2);color:#fff}
 .filter-chip.active{background:var(--grad);border-color:transparent;color:#fff;box-shadow:0 8px 20px -8px rgba(124,92,255,.7)}
-.posts-refresh{
-  display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:100px;
-  background:var(--surface-2);border:1px solid var(--border-2);font-size:.78rem;font-weight:600;
-  color:var(--text);transition:.3s var(--ease);
-}
+.posts-refresh{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;border-radius:100px;background:var(--surface-2);border:1px solid var(--border-2);font-size:.78rem;font-weight:600;color:var(--text);transition:.3s var(--ease)}
 .posts-refresh:hover{background:var(--grad);color:#fff;border-color:transparent;transform:translateY(-2px)}
 .posts-refresh i{transition:.5s}
 .posts-refresh.spinning i{transform:rotate(360deg)}
-
 .posts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
-.post-card{
-  border-radius:var(--radius);overflow:hidden;background:var(--surface);
-  border:1px solid var(--border);transition:.5s var(--ease);
-  display:flex;flex-direction:column;position:relative;
-  animation:postIn .5s var(--ease) both;
-}
+.post-card{border-radius:var(--radius);overflow:hidden;background:var(--surface);border:1px solid var(--border);transition:.5s var(--ease);display:flex;flex-direction:column;position:relative;animation:postIn .5s var(--ease) both}
 @keyframes postIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 .post-card:hover{transform:translateY(-8px);border-color:var(--border-2);box-shadow:0 30px 60px -30px rgba(124,92,255,.5)}
 .post-media{position:relative;aspect-ratio:16/10;overflow:hidden;background:linear-gradient(135deg,#1e1b4b,#312e81)}
 .post-media img{width:100%;height:100%;object-fit:cover;transition:.6s var(--ease)}
 .post-card:hover .post-media img{transform:scale(1.07)}
 .post-media.no-img{display:grid;place-items:center;font-size:3rem;color:rgba(255,255,255,.25)}
-.post-source{
-  position:absolute;top:12px;left:12px;z-index:2;
-  display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:100px;
-  background:rgba(5,7,15,.75);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);
-  font-size:.66rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff;
-}
+.post-source{position:absolute;top:12px;left:12px;z-index:2;display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:100px;background:rgba(5,7,15,.75);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);font-size:.66rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff}
 .post-source i{font-size:.8rem}
 .post-source[data-p="facebook"] i{color:#1877f2}
 .post-source[data-p="tiktok"] i{color:#ff0050}
@@ -260,20 +182,11 @@ section{padding:110px 0;position:relative}
 .post-stats i{font-size:.75rem;color:var(--violet-2)}
 .post-open{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:600;color:var(--cyan);transition:.3s}
 .post-open:hover{color:var(--gold);transform:translateX(3px)}
-
-.posts-empty,.posts-loading{
-  grid-column:1/-1;text-align:center;padding:70px 20px;color:var(--text-dim);
-}
-.posts-loading .loader-ring{margin:0 auto 20px}
+.posts-empty{grid-column:1/-1;text-align:center;padding:70px 20px;color:var(--text-dim)}
 .posts-empty i{font-size:2.5rem;margin-bottom:16px;color:var(--violet-2);opacity:.5}
 .posts-empty h4{color:var(--text);font-size:1.1rem;margin-bottom:8px;font-weight:700}
-.posts-module-note{
-  margin-top:28px;text-align:center;font-size:.78rem;color:var(--text-dim);
-  font-family:var(--font-mono);
-}
+.posts-module-note{margin-top:28px;text-align:center;font-size:.78rem;color:var(--text-dim);font-family:var(--font-mono)}
 .posts-module-note code{background:var(--surface);padding:3px 10px;border-radius:6px;border:1px solid var(--border);color:var(--cyan)}
-
-/* ============ AFFILIATE ============ */
 .affiliate{background:radial-gradient(ellipse at 50% 0%,rgba(251,191,36,.08),transparent 60%)}
 .aff-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:50px;align-items:center}
 .aff-visual{position:relative;border-radius:var(--radius-lg);overflow:hidden;padding:60px 40px;text-align:center;background:linear-gradient(160deg,rgba(251,191,36,.12),rgba(244,114,182,.06),rgba(124,92,255,.1));border:1px solid rgba(251,191,36,.2);box-shadow:0 40px 100px -40px rgba(251,191,36,.35)}
@@ -302,8 +215,6 @@ section{padding:110px 0;position:relative}
 .copy-btn:hover{background:var(--grad);color:#fff;border-color:transparent;transform:translateY(-2px)}
 .copy-btn.copied{background:rgba(52,211,153,.2);border-color:var(--green);color:var(--green)}
 .aff-cta{display:flex;flex-wrap:wrap;gap:12px}
-
-/* ============ TIMELINE (Experience + Education) ============ */
 .timeline-wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px}
 .timeline h3.col-title{font-family:var(--font-display);font-size:1.4rem;font-weight:800;letter-spacing:-.5px;margin-bottom:30px;display:flex;align-items:center;gap:12px}
 .timeline h3.col-title .ic{width:44px;height:44px;border-radius:12px;background:var(--grad);display:grid;place-items:center;font-size:1rem;color:#fff;box-shadow:0 10px 25px -10px rgba(124,92,255,.7)}
@@ -323,8 +234,6 @@ section{padding:110px 0;position:relative}
 .tl-item ul{list-style:none;margin-top:8px}
 .tl-item ul li{font-size:.82rem;color:var(--text-dim);padding-left:18px;position:relative;margin-bottom:4px;line-height:1.55}
 .tl-item ul li::before{content:'▸';position:absolute;left:0;color:var(--violet-2);font-weight:700}
-
-/* ============ SKILLS ============ */
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
 .skill-block{padding:28px 26px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--border);transition:.4s var(--ease);position:relative;overflow:hidden}
 .skill-block:hover{border-color:var(--border-2);background:var(--surface-2);transform:translateY(-5px)}
@@ -342,8 +251,6 @@ section{padding:110px 0;position:relative}
 .skill-block:nth-child(3) .chip:hover{background:var(--grad-gold);color:#0a0e1a}
 .skill-block:nth-child(4) .chip{background:rgba(244,114,182,.1);border-color:rgba(244,114,182,.2);color:var(--pink)}
 .skill-block:nth-child(4) .chip:hover{background:linear-gradient(135deg,#f472b6,#db2777);color:#fff}
-
-/* ============ SOCIAL STRIP ============ */
 .social-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px}
 .social-card{padding:22px 18px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--border);text-align:center;transition:.4s var(--ease);position:relative;overflow:hidden}
 .social-card:hover{transform:translateY(-8px);border-color:var(--border-2);box-shadow:0 25px 50px -25px var(--brand-shadow,rgba(124,92,255,.6))}
@@ -357,8 +264,6 @@ section{padding:110px 0;position:relative}
 .social-card[data-brand="github"]{--brand-color:#e5e7eb;--brand-shadow:rgba(229,231,235,.5)}
 .social-card[data-brand="twitter"]{--brand-color:#1d9bf0;--brand-shadow:rgba(29,155,240,.6)}
 .social-card[data-brand="whatsapp"]{--brand-color:#25d366;--brand-shadow:rgba(37,211,102,.6)}
-
-/* ============ CONTACT ============ */
 .contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;align-items:start}
 .contact-side{padding:38px 32px;border-radius:var(--radius-lg);position:relative;overflow:hidden;background:linear-gradient(160deg,rgba(124,92,255,.15),rgba(34,211,238,.08));border:1px solid var(--border-2)}
 .contact-side::before{content:'';position:absolute;top:-60%;right:-40%;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(251,191,36,.2),transparent 60%);filter:blur(20px)}
@@ -381,23 +286,17 @@ section{padding:110px 0;position:relative}
 .field input::placeholder,.field textarea::placeholder{color:#555f7a}
 .field select option{background:#0f1424;color:#eef2ff}
 .form-note{font-size:.78rem;color:var(--text-dim);text-align:center;margin-top:14px}
-
-/* ============ MODAL ============ */
 .modal{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:20px;background:rgba(5,7,15,.85);backdrop-filter:blur(12px);opacity:0;visibility:hidden;transition:.4s var(--ease)}
 .modal.open{opacity:1;visibility:visible}
 .modal-card{width:100%;max-width:480px;padding:40px 34px;border-radius:var(--radius-lg);background:linear-gradient(160deg,rgba(20,24,40,.98),rgba(10,14,26,.98));border:1px solid var(--border-2);position:relative;transform:scale(.92) translateY(20px);transition:.4s var(--ease);box-shadow:0 40px 100px -20px rgba(0,0,0,.8)}
 .modal.open .modal-card{transform:scale(1) translateY(0)}
 .modal-close{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:var(--surface);border:1px solid var(--border);display:grid;place-items:center;color:var(--text-dim);font-size:.9rem;transition:.3s}
 .modal-close:hover{background:#ef4444;color:#fff;border-color:transparent;transform:rotate(90deg)}
-
-/* ============ TOAST ============ */
 .toast{position:fixed;bottom:30px;left:50%;transform:translate(-50%,140%);z-index:9999;padding:16px 26px;border-radius:100px;background:rgba(15,20,35,.95);backdrop-filter:blur(16px);border:1px solid var(--border-2);font-size:.88rem;font-weight:600;display:flex;align-items:center;gap:12px;box-shadow:0 25px 60px -15px rgba(0,0,0,.8);transition:.5s var(--ease);max-width:92%}
 .toast.show{transform:translate(-50%,0)}
 .toast.success{border-color:rgba(52,211,153,.5);color:var(--green)}
 .toast.error{border-color:rgba(239,68,68,.5);color:#f87171}
 .toast i{font-size:1.05rem}
-
-/* ============ FOOTER ============ */
 .footer{padding:70px 0 30px;border-top:1px solid var(--border);position:relative;overflow:hidden;background:linear-gradient(180deg,transparent,rgba(124,92,255,.04))}
 .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px;margin-bottom:50px}
 .footer-brand .logo{margin-bottom:18px}
@@ -413,45 +312,33 @@ section{padding:110px 0;position:relative}
 .footer-social{display:flex;gap:8px}
 .footer-social a{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--surface);border:1px solid var(--border);color:var(--text-dim);transition:.3s var(--ease);font-size:.85rem}
 .footer-social a:hover{background:var(--grad);color:#fff;border-color:transparent;transform:translateY(-4px)}
-
-/* ============ BACK TO TOP ============ */
 .to-top{position:fixed;bottom:30px;right:30px;width:52px;height:52px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;font-size:1rem;z-index:800;opacity:0;visibility:hidden;transform:translateY(20px) scale(.8);transition:.4s var(--ease);box-shadow:var(--shadow-glow)}
 .to-top.show{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
 .to-top:hover{transform:translateY(-5px) scale(1.1)}
-
-/* ============ REVEAL ============ */
 [data-reveal]{opacity:0;transform:translateY(40px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 [data-reveal].revealed{opacity:1;transform:translateY(0)}
 [data-reveal-delay="1"]{transition-delay:.1s}
 [data-reveal-delay="2"]{transition-delay:.2s}
 [data-reveal-delay="3"]{transition-delay:.3s}
-[data-reveal-delay="4"]{transition-delay:.4s}
-
-/* ============ RESPONSIVE ============ */
 @media (max-width:1100px){
   .hero-grid{grid-template-columns:1fr;text-align:center;gap:50px}
   .hero-sub{margin-left:auto;margin-right:auto}
   .hero-cta,.hero-stats{justify-content:center}
-  .hero-visual{order:-1}
-  .orb{width:min(320px,78vw)}
+  .hero-visual{order:-1}.orb{width:min(320px,78vw)}
   .aff-grid{grid-template-columns:1fr;gap:40px}
   .timeline-wrap{grid-template-columns:1fr;gap:50px}
   .contact-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
 }
 @media (max-width:820px){
-  section{padding:80px 0}
-  .hero{padding-top:150px}
+  section{padding:80px 0}.hero{padding-top:150px}
   .nav-links{position:fixed;top:88px;left:4%;width:92%;flex-direction:column;gap:6px;padding:20px;border-radius:24px;background:rgba(10,14,26,.98);backdrop-filter:blur(20px);border:1px solid var(--border-2);box-shadow:0 30px 60px rgba(0,0,0,.7);opacity:0;visibility:hidden;transform:translateY(-10px);transition:.4s var(--ease)}
   .nav-links.open{opacity:1;visibility:visible;transform:translateY(0)}
   .nav-links a{padding:14px 18px;width:100%;text-align:center;font-size:.95rem}
-  .menu-toggle{display:grid}
-  .nav-shell{padding:10px 12px 10px 18px}
-  .offer-grid{grid-template-columns:1fr}
-  .form-row{grid-template-columns:1fr}
+  .menu-toggle{display:grid}.nav-shell{padding:10px 12px 10px 18px}
+  .offer-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr;gap:34px;text-align:center}
-  .footer-brand p{margin:0 auto}
-  .footer-col ul{align-items:center}
+  .footer-brand p{margin:0 auto}.footer-col ul{align-items:center}
   .footer-bottom{flex-direction:column;text-align:center}
   .orbit-badge{display:none}
   .posts-toolbar{border-radius:22px;padding:14px 18px}
@@ -473,18 +360,15 @@ section{padding:110px 0;position:relative}
 </head>
 <body>
 
-<!-- PRELOADER -->
 <div class="preloader" id="preloader">
   <div class="loader-ring"></div>
   <div class="loader-bar"><span></span></div>
   <div class="loader-text">Loading Profile</div>
 </div>
 
-<!-- CURSOR -->
 <div class="cursor" id="cursor"></div>
 <div class="cursor-dot" id="cursorDot"></div>
 
-<!-- HEADER -->
 <header class="header" id="header">
   <div class="container">
     <div class="nav-shell">
@@ -512,20 +396,14 @@ section{padding:110px 0;position:relative}
 
 <main>
 
-<!-- HERO -->
 <section class="hero" id="home">
   <div class="container">
     <div class="hero-grid">
       <div class="hero-text" data-reveal>
         <div class="status-pill"><span class="status-dot"></span> Open to Opportunities · Nepal 🇳🇵</div>
-        <h1>
-          Kabi Raj Bhatt
-          <br><span class="grad">Admin · Digital · Affiliate</span>
-        </h1>
+        <h1>Kabi Raj Bhatt<br><span class="grad">Admin · Digital · Affiliate</span></h1>
         <div class="type-wrap">&lt;<span id="typedRole"></span><span class="type-cursor"></span>/&gt;</div>
-        <p class="hero-sub">
-          Motivated professional experienced in <strong>administration, data entry, digital services, documentation,</strong> and <strong>Brother Mart Affiliate Partner</strong>. BBS Graduate · MBS Candidate · Diploma in Civil Engineering.
-        </p>
+        <p class="hero-sub">Motivated professional experienced in <strong>administration, data entry, digital services, documentation,</strong> and <strong>Brother Mart Affiliate Partner</strong>. BBS Graduate · MBS Candidate · Diploma in Civil Engineering.</p>
         <div class="hero-cta">
           <a href="#posts" class="btn btn-primary btn-lg" data-cursor="hover"><i class="fas fa-newspaper"></i> Latest Posts</a>
           <a href="#affiliate" class="btn btn-gold btn-lg" data-cursor="hover"><i class="fas fa-bolt"></i> Get Rs 300 OFF</a>
@@ -538,7 +416,6 @@ section{padding:110px 0;position:relative}
           <div class="stat-card"><div class="stat-num" data-count="100">0</div><div class="stat-lbl">Clients</div></div>
         </div>
       </div>
-
       <div class="hero-visual" data-reveal data-reveal-delay="2">
         <div class="orb">
           <div class="orb-photo">
@@ -554,7 +431,6 @@ section{padding:110px 0;position:relative}
   </div>
 </section>
 
-<!-- MARQUEE -->
 <div class="marquee">
   <div class="marquee-track" id="marqueeTrack">
     <div class="marquee-item"><i class="fas fa-briefcase"></i> Administration</div>
@@ -568,7 +444,6 @@ section{padding:110px 0;position:relative}
   </div>
 </div>
 
-<!-- ================= POSTS / SOCIAL MODULE ================= -->
 <section class="posts-section" id="posts">
   <div class="container">
     <div class="section-head" data-reveal>
@@ -576,7 +451,6 @@ section{padding:110px 0;position:relative}
       <h2>Latest <span class="grad">Posts &amp; Updates</span></h2>
       <p>Fresh content from my social media, website, and Brother Mart activity — all in one place.</p>
     </div>
-
     <div class="posts-toolbar" data-reveal>
       <div class="posts-filters" id="postsFilters">
         <button class="filter-chip active" data-filter="all"><i class="fas fa-layer-group"></i> All</button>
@@ -585,25 +459,13 @@ section{padding:110px 0;position:relative}
         <button class="filter-chip" data-filter="youtube"><i class="fab fa-youtube"></i> YouTube</button>
         <button class="filter-chip" data-filter="website"><i class="fas fa-globe"></i> Website</button>
       </div>
-      <button class="posts-refresh" id="postsRefresh" data-cursor="hover">
-        <i class="fas fa-rotate"></i> Refresh Feed
-      </button>
+      <button class="posts-refresh" id="postsRefresh" data-cursor="hover"><i class="fas fa-rotate"></i> Refresh Feed</button>
     </div>
-
-    <div class="posts-grid" id="postsGrid">
-      <div class="posts-loading">
-        <div class="loader-ring"></div>
-        <p>Loading posts from <code>social/post.html</code>...</p>
-      </div>
-    </div>
-
-    <div class="posts-module-note">
-      ⚡ Connected to <code>social/post.html</code> — drop new posts there and this feed updates automatically.
-    </div>
+    <div class="posts-grid" id="postsGrid"></div>
+    <div class="posts-module-note">⚡ Connected to <code>social/post.html</code> — drop new posts there and this feed updates automatically.</div>
   </div>
 </section>
 
-<!-- ================= AFFILIATE ================= -->
 <section class="affiliate" id="affiliate">
   <div class="container">
     <div class="section-head" data-reveal>
@@ -646,7 +508,6 @@ section{padding:110px 0;position:relative}
   </div>
 </section>
 
-<!-- ================= EXPERIENCE & EDUCATION ================= -->
 <section id="experience">
   <div class="container">
     <div class="section-head" data-reveal>
@@ -654,9 +515,7 @@ section{padding:110px 0;position:relative}
       <h2>Experience &amp; <span class="grad">Education</span></h2>
       <p>A track record of practical experience and continuous learning.</p>
     </div>
-
     <div class="timeline-wrap">
-      <!-- Experience -->
       <div class="timeline" data-reveal>
         <h3 class="col-title"><span class="ic"><i class="fas fa-briefcase"></i></span> Professional Experience</h3>
         <div class="tl-items">
@@ -697,46 +556,20 @@ section{padding:110px 0;position:relative}
           </div>
         </div>
       </div>
-
-      <!-- Education -->
       <div class="timeline" data-reveal data-reveal-delay="2">
         <h3 class="col-title gold"><span class="ic"><i class="fas fa-graduation-cap"></i></span> Education</h3>
         <div class="tl-items">
-          <div class="tl-item gold">
-            <div class="tl-date">Running · 4th Semester</div>
-            <h4>Master of Business Studies (MBS)</h4>
-            <div class="tl-org">Tribhuvan University (TU)</div>
-          </div>
-          <div class="tl-item gold">
-            <div class="tl-date">Completed 2023 · 2080 B.S.</div>
-            <h4>Bachelor of Business Studies (BBS)</h4>
-            <div class="tl-org">Krishna Baijnath Multiple Campus, TU</div>
-            <p>46.70% · Second Division</p>
-          </div>
-          <div class="tl-item gold">
-            <div class="tl-date">Final Exam Completed</div>
-            <h4>Diploma in Civil Engineering</h4>
-            <div class="tl-org">Shuklaphanta Polytechnic Institute, CTEVT</div>
-            <p>Result pending / as applicable</p>
-          </div>
-          <div class="tl-item gold">
-            <div class="tl-date">2073 B.S. · 51.20%</div>
-            <h4>+2 / Higher Secondary Education</h4>
-            <div class="tl-org">Chandra Surya Bal Vidyalaya</div>
-            <p>Second Division</p>
-          </div>
-          <div class="tl-item gold">
-            <div class="tl-date">2069 B.S. · First Division</div>
-            <h4>SLC</h4>
-            <div class="tl-org">Baijnath Higher Secondary School</div>
-          </div>
+          <div class="tl-item gold"><div class="tl-date">Running · 4th Semester</div><h4>Master of Business Studies (MBS)</h4><div class="tl-org">Tribhuvan University (TU)</div></div>
+          <div class="tl-item gold"><div class="tl-date">Completed 2023 · 2080 B.S.</div><h4>Bachelor of Business Studies (BBS)</h4><div class="tl-org">Krishna Baijnath Multiple Campus, TU</div><p>46.70% · Second Division</p></div>
+          <div class="tl-item gold"><div class="tl-date">Final Exam Completed</div><h4>Diploma in Civil Engineering</h4><div class="tl-org">Shuklaphanta Polytechnic Institute, CTEVT</div><p>Result pending / as applicable</p></div>
+          <div class="tl-item gold"><div class="tl-date">2073 B.S. · 51.20%</div><h4>+2 / Higher Secondary Education</h4><div class="tl-org">Chandra Surya Bal Vidyalaya</div><p>Second Division</p></div>
+          <div class="tl-item gold"><div class="tl-date">2069 B.S. · First Division</div><h4>SLC</h4><div class="tl-org">Baijnath Higher Secondary School</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= SKILLS & TRAINING ================= -->
 <section id="skills">
   <div class="container">
     <div class="section-head" data-reveal>
@@ -744,47 +577,36 @@ section{padding:110px 0;position:relative}
       <h2>Core <span class="grad">Competencies</span></h2>
       <p>Practical skills built through training, hands-on work, and continuous learning.</p>
     </div>
-
     <div class="skills-grid">
       <div class="skill-block" data-reveal data-reveal-delay="1">
         <h4><i class="fas fa-briefcase"></i> Administration &amp; Office</h4>
         <div class="chip-row">
-          <span class="chip">Administration</span>
-          <span class="chip">Office Support</span>
-          <span class="chip">Documentation</span>
-          <span class="chip">Record Keeping</span>
-          <span class="chip">Filing &amp; Handling</span>
-          <span class="chip">Reporting</span>
+          <span class="chip">Administration</span><span class="chip">Office Support</span>
+          <span class="chip">Documentation</span><span class="chip">Record Keeping</span>
+          <span class="chip">Filing &amp; Handling</span><span class="chip">Reporting</span>
         </div>
       </div>
       <div class="skill-block" data-reveal data-reveal-delay="2">
         <h4><i class="fas fa-database"></i> Data &amp; Computer</h4>
         <div class="chip-row">
-          <span class="chip">Data Entry</span>
-          <span class="chip">Data Management</span>
-          <span class="chip">MS Word</span>
-          <span class="chip">MS Excel</span>
-          <span class="chip">Internet &amp; Email</span>
-          <span class="chip">Online Applications</span>
+          <span class="chip">Data Entry</span><span class="chip">Data Management</span>
+          <span class="chip">MS Word</span><span class="chip">MS Excel</span>
+          <span class="chip">Internet &amp; Email</span><span class="chip">Online Applications</span>
         </div>
       </div>
       <div class="skill-block" data-reveal data-reveal-delay="3">
         <h4><i class="fas fa-globe"></i> Digital &amp; Marketing</h4>
         <div class="chip-row">
-          <span class="chip">Digital Marketing</span>
-          <span class="chip">Social Media</span>
-          <span class="chip">Online Promotion</span>
-          <span class="chip">Content Support</span>
+          <span class="chip">Digital Marketing</span><span class="chip">Social Media</span>
+          <span class="chip">Online Promotion</span><span class="chip">Content Support</span>
           <span class="chip">Brother Mart Affiliate</span>
         </div>
       </div>
       <div class="skill-block" data-reveal data-reveal-delay="1">
         <h4><i class="fas fa-users"></i> Soft Skills &amp; Other</h4>
         <div class="chip-row">
-          <span class="chip">Customer Support</span>
-          <span class="chip">Teamwork</span>
-          <span class="chip">Community Coordination</span>
-          <span class="chip">Basic AutoCAD</span>
+          <span class="chip">Customer Support</span><span class="chip">Teamwork</span>
+          <span class="chip">Community Coordination</span><span class="chip">Basic AutoCAD</span>
           <span class="chip">Nepali · English · Hindi</span>
         </div>
       </div>
@@ -792,7 +614,6 @@ section{padding:110px 0;position:relative}
   </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
 <section id="about">
   <div class="container">
     <div class="section-head" data-reveal>
@@ -800,26 +621,18 @@ section{padding:110px 0;position:relative}
       <h2>Meet <span class="grad">Kabi Raj Bhatt</span></h2>
       <p>Committed to meaningful administrative, digital, and community-focused work.</p>
     </div>
-
-    <div class="about-grid" style="display:grid;grid-template-columns:1fr 1.4fr;gap:60px;align-items:center">
-      <div class="about-visual" data-reveal>
-        <div class="about-photo" style="border-radius:32px;overflow:hidden;aspect-ratio:4/5;background:linear-gradient(135deg,#1e1b4b,#312e81);position:relative;border:1px solid var(--border-2);box-shadow:0 40px 80px -30px rgba(124,92,255,.5)">
+    <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:60px;align-items:center" class="about-grid">
+      <div data-reveal>
+        <div style="border-radius:32px;overflow:hidden;aspect-ratio:4/5;background:linear-gradient(135deg,#1e1b4b,#312e81);position:relative;border:1px solid var(--border-2);box-shadow:0 40px 80px -30px rgba(124,92,255,.5)">
           <img src="images/profile1.jpg" alt="Kabi Raj Bhatt" onerror="this.classList.add('error')" style="width:100%;height:100%;object-fit:cover" />
           <div class="avatar-fallback" style="font-size:7rem;display:none;position:absolute;inset:0;place-items:center">👨‍💼</div>
         </div>
       </div>
       <div data-reveal data-reveal-delay="2">
         <h3 style="font-family:var(--font-display);font-size:clamp(1.7rem,3.2vw,2.3rem);font-weight:800;letter-spacing:-1.2px;line-height:1.15;margin-bottom:18px">Turning Ideas into <span class="grad" style="background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Action &amp; Impact</span></h3>
-        <p style="color:var(--text-mid);margin-bottom:16px;line-height:1.8">
-          I'm a motivated and adaptable professional from <strong style="color:var(--text)">Shuklaphanta-01, Ganeshpur, Kanchanpur, Nepal</strong>, with hands-on experience in administration, data entry, digital services, documentation, and community-level support.
-        </p>
-        <p style="color:var(--text-mid);margin-bottom:16px;line-height:1.8">
-          Currently pursuing <strong style="color:var(--text)">MBS (4th Semester)</strong> while holding a <strong style="color:var(--text)">BBS degree</strong> and <strong style="color:var(--text)">Diploma in Civil Engineering</strong>. Also trained in digital marketing, mobile repair, computer operations, and basic AutoCAD.
-        </p>
-        <p style="color:var(--text-mid);margin-bottom:24px;line-height:1.8">
-          Interested in opportunities with <strong style="color:var(--text)">NGOs, INGOs, development organizations,</strong> and private institutions — particularly in administration, program/project support, documentation, data management, and community-focused work.
-        </p>
-
+        <p style="color:var(--text-mid);margin-bottom:16px;line-height:1.8">I'm a motivated and adaptable professional from <strong style="color:var(--text)">Shuklaphanta-01, Ganeshpur, Kanchanpur, Nepal</strong>, with hands-on experience in administration, data entry, digital services, documentation, and community-level support.</p>
+        <p style="color:var(--text-mid);margin-bottom:16px;line-height:1.8">Currently pursuing <strong style="color:var(--text)">MBS (4th Semester)</strong> while holding a <strong style="color:var(--text)">BBS degree</strong> and <strong style="color:var(--text)">Diploma in Civil Engineering</strong>. Also trained in digital marketing, mobile repair, computer operations, and basic AutoCAD.</p>
+        <p style="color:var(--text-mid);margin-bottom:24px;line-height:1.8">Interested in opportunities with <strong style="color:var(--text)">NGOs, INGOs, development organizations,</strong> and private institutions — particularly in administration, program/project support, documentation, data management, and community-focused work.</p>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:26px">
           <div style="padding:14px 18px;border-radius:14px;background:var(--surface);border:1px solid var(--border)">
             <div style="font-size:.66rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-dim);font-weight:600;margin-bottom:4px"><i class="fas fa-user" style="color:var(--violet-2)"></i> Full Name</div>
@@ -838,7 +651,6 @@ section{padding:110px 0;position:relative}
             <div style="font-size:.88rem;font-weight:600;color:var(--gold)">Brother Mart Affiliate</div>
           </div>
         </div>
-
         <div class="aff-cta">
           <a href="#contact" class="btn btn-primary" data-cursor="hover"><i class="fas fa-paper-plane"></i> Let's Talk</a>
           <a href="#" class="btn btn-ghost" data-cursor="hover"><i class="fas fa-download"></i> Download CV</a>
@@ -848,7 +660,6 @@ section{padding:110px 0;position:relative}
   </div>
 </section>
 
-<!-- ================= SOCIAL ================= -->
 <section id="social">
   <div class="container">
     <div class="section-head" data-reveal>
@@ -867,7 +678,6 @@ section{padding:110px 0;position:relative}
   </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
 <section id="contact">
   <div class="container">
     <div class="section-head" data-reveal>
@@ -875,7 +685,6 @@ section{padding:110px 0;position:relative}
       <h2>Let's Work <span class="grad">Together</span></h2>
       <p>Have a project, job opportunity, or product inquiry? Drop a message.</p>
     </div>
-
     <div class="contact-grid">
       <div class="contact-side" data-reveal>
         <h3>Get In Touch</h3>
@@ -888,7 +697,6 @@ section{padding:110px 0;position:relative}
           <li><div class="ic"><i class="fas fa-tag"></i></div><div class="txt"><strong>Coupon</strong><span style="color:var(--gold);font-weight:700">TOP1</span> — Rs 300 OFF</div></li>
         </ul>
       </div>
-
       <form class="form-card" id="contactForm" data-reveal data-reveal-delay="2" novalidate>
         <div class="form-row">
           <div class="field"><label for="name">Your Name *</label><input type="text" id="name" placeholder="John Doe" required /></div>
@@ -905,7 +713,6 @@ section{padding:110px 0;position:relative}
 
 </main>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -948,10 +755,8 @@ section{padding:110px 0;position:relative}
 </footer>
 
 <button class="to-top" id="toTop" aria-label="Back to top" data-cursor="hover"><i class="fas fa-arrow-up"></i></button>
-
 <div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastMsg"></span></div>
 
-<!-- LOGIN MODAL -->
 <div class="modal" id="loginModal">
   <div class="modal-card">
     <button class="modal-close" data-close="loginModal" aria-label="Close"><i class="fas fa-times"></i></button>
@@ -971,7 +776,7 @@ section{padding:110px 0;position:relative}
 
 <script>
 /* ============ PRELOADER ============ */
-window.addEventListener('load', () => setTimeout(() => document.getElementById('preloader').classList.add('done'), 900));
+window.addEventListener('load', () => setTimeout(() => document.getElementById('preloader').classList.add('done'), 800));
 
 /* ============ CURSOR ============ */
 (() => {
@@ -1037,7 +842,7 @@ document.querySelectorAll('[data-count]').forEach(el => {
   tick();
 })();
 
-/* ============ MARQUEE DUPLICATE ============ */
+/* ============ MARQUEE ============ */
 (() => { const t = document.getElementById('marqueeTrack'); t.innerHTML += t.innerHTML; })();
 
 /* ============ COPY ============ */
@@ -1115,11 +920,12 @@ window.addEventListener('scroll', () => toTop.classList.toggle('show', window.sc
 toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
 /* ============================================================
-   POSTS MODULE CONNECTOR  →  social/post.html
+   POSTS MODULE  →  social/post.html
    ------------------------------------------------------------
-   The feed tries to fetch from `social/post.html` first.
-   If it can't (file missing / CORS / offline), it falls back
-   to a built-in demo feed so the section always works.
+   ✅ FIXED: Demo posts render INSTANTLY (never stuck on "Loading")
+   ✅ Then tries to fetch social/post.html with a 3s timeout
+   ✅ If fetch succeeds → replaces with real posts
+   ✅ If fetch fails   → keeps demo posts (silent fallback)
    ============================================================ */
 const POSTS_ENDPOINT = 'social/post.html';
 let allPosts = [];
@@ -1129,141 +935,68 @@ const grid = document.getElementById('postsGrid');
 const filters = document.getElementById('postsFilters');
 const refreshBtn = document.getElementById('postsRefresh');
 
-/* ---- Demo fallback feed ---- */
+/* ---- Demo posts (rendered immediately) ---- */
 const DEMO_POSTS = [
   {
-    id: 1,
-    platform: 'facebook',
-    author: 'Kabi Raj Bhatt',
-    avatar: 'KRB',
-    date: '2 days ago',
+    id: 1, platform: 'facebook', author: 'Kabi Raj Bhatt', avatar: 'KRB', date: '2 days ago',
     title: 'Brother Mart Affiliate — Rs 300 OFF with TOP1 🎉',
     text: 'Just partnered with Brother Mart! Use coupon TOP1 and save Rs 300 on your first purchase. Quality products, fast delivery across Nepal.',
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
-    tags: ['BrotherMart', 'TOP1', 'Nepal'],
-    likes: 128, comments: 24,
+    tags: ['BrotherMart', 'TOP1', 'Nepal'], likes: 128, comments: 24,
     url: 'https://brother-mart.com/?ref=KABI'
   },
   {
-    id: 2,
-    platform: 'tiktok',
-    author: 'Kabi Raj Bhatt',
-    avatar: 'KRB',
-    date: '5 days ago',
+    id: 2, platform: 'tiktok', author: 'Kabi Raj Bhatt', avatar: 'KRB', date: '5 days ago',
     title: 'Quick tour of my workspace 💻',
     text: 'Behind the scenes of my daily admin + digital workflow. Setup tour on TikTok now live!',
     image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=80',
-    tags: ['Workspace', 'Setup', 'BehindTheScenes'],
-    likes: 342, comments: 56,
+    tags: ['Workspace', 'Setup', 'BehindTheScenes'], likes: 342, comments: 56,
     url: 'https://www.tiktok.com/@kabiraj__'
   },
   {
-    id: 3,
-    platform: 'youtube',
-    author: 'Kabi Raj Bhatt',
-    avatar: 'KRB',
-    date: '1 week ago',
+    id: 3, platform: 'youtube', author: 'Kabi Raj Bhatt', avatar: 'KRB', date: '1 week ago',
     title: 'Brother Mart product review — Best deals of 2026',
     text: 'Full walkthrough of the best Brother Mart products this month with exclusive affiliate discounts.',
     image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80',
-    tags: ['Review', 'BrotherMart', 'Deals'],
-    likes: 210, comments: 38,
+    tags: ['Review', 'BrotherMart', 'Deals'], likes: 210, comments: 38,
     url: 'https://www.youtube.com/@kabirajbhatt-1'
   },
   {
-    id: 4,
-    platform: 'website',
-    author: 'Kabi Raj Bhatt',
-    avatar: 'KRB',
-    date: '2 weeks ago',
+    id: 4, platform: 'website', author: 'Kabi Raj Bhatt', avatar: 'KRB', date: '2 weeks ago',
     title: 'Now available for administrative & data management roles',
     text: 'Actively looking for opportunities in administration, program/project support, documentation, and data management with NGOs, INGOs, and private institutions.',
     image: 'https://images.unsplash.com/photo-1522199755839-a2bacb67c546?w=800&q=80',
-    tags: ['OpenToWork', 'Admin', 'DataEntry'],
-    likes: 89, comments: 12,
+    tags: ['OpenToWork', 'Admin', 'DataEntry'], likes: 89, comments: 12,
     url: '#contact'
   },
   {
-    id: 5,
-    platform: 'facebook',
-    author: 'Kabi Raj Bhatt',
-    avatar: 'KRB',
-    date: '3 weeks ago',
+    id: 5, platform: 'facebook', author: 'Kabi Raj Bhatt', avatar: 'KRB', date: '3 weeks ago',
     title: 'Community initiative — clean-up drive 🌱',
     text: 'Proud to participate in local community and environment-focused programs in Kanchanpur.',
     image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80',
-    tags: ['Community', 'Nepal', 'Volunteer'],
-    likes: 176, comments: 30,
+    tags: ['Community', 'Nepal', 'Volunteer'], likes: 176, comments: 30,
     url: 'https://www.facebook.com/share/1HqKUh1GBk/'
   },
   {
-    id: 6,
-    platform: 'tiktok',
-    author: 'Kabi Raj Bhatt',
-    avatar: 'KRB',
-    date: '1 month ago',
+    id: 6, platform: 'tiktok', author: 'Kabi Raj Bhatt', avatar: 'KRB', date: '1 month ago',
     title: 'How to use coupon TOP1 at Brother Mart 🛒',
     text: 'Step-by-step: copy TOP1, paste at checkout, save Rs 300 instantly. Watch now!',
     image: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&q=80',
-    tags: ['Tutorial', 'TOP1', 'SaveMoney'],
-    likes: 512, comments: 74,
+    tags: ['Tutorial', 'TOP1', 'SaveMoney'], likes: 512, comments: 74,
     url: 'https://brother-mart.com/discount/TOP1?ref=KABI'
   }
 ];
 
-/* ---- Platform icon map ---- */
 const PLATFORM_ICON = {
-  facebook: 'fab fa-facebook-f',
-  tiktok: 'fab fa-tiktok',
-  youtube: 'fab fa-youtube',
-  instagram: 'fab fa-instagram',
-  website: 'fas fa-globe'
+  facebook: 'fab fa-facebook-f', tiktok: 'fab fa-tiktok',
+  youtube: 'fab fa-youtube', instagram: 'fab fa-instagram', website: 'fas fa-globe'
 };
 
-/* ---- Parse post.html (extract embedded posts JSON if present) ---- */
-function extractPostsFromHTML(html) {
-  // Look for a JSON block: <script id="posts-data" type="application/json">[...]</script>
-  const m = html.match(/<script[^>]*id=["']posts-data["'][^>]*>([\s\S]*?)<\/script>/i);
-  if (m) {
-    try { return JSON.parse(m[1].trim()); } catch (e) { console.warn('post.html JSON parse failed:', e); }
-  }
-  // Fallback: look for any JSON array
-  const m2 = html.match(/\[\s*\{[\s\S]*?"platform"[\s\S]*?\}\s*\]/);
-  if (m2) { try { return JSON.parse(m2[0]); } catch (e) {} }
-  return null;
-}
-
-/* ---- Fetch posts ---- */
-async function loadPosts() {
-  grid.innerHTML = '<div class="posts-loading"><div class="loader-ring"></div><p>Loading posts from <code>social/post.html</code>...</p></div>';
-  try {
-    const res = await fetch(POSTS_ENDPOINT + '?t=' + Date.now(), { cache: 'no-store' });
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const html = await res.text();
-    const parsed = extractPostsFromHTML(html);
-    if (parsed && Array.isArray(parsed) && parsed.length) {
-      allPosts = parsed;
-      console.log('%c✓ Loaded ' + parsed.length + ' posts from social/post.html', 'color:#34d399;font-weight:600;');
-    } else {
-      throw new Error('No posts-data block found in post.html');
-    }
-  } catch (err) {
-    console.warn('⚠ Could not load social/post.html — using demo feed.', err.message);
-    allPosts = DEMO_POSTS;
-  }
-  renderPosts();
-}
-
-/* ---- Render ---- */
+/* ---- Render posts ---- */
 function renderPosts() {
   const list = activeFilter === 'all' ? allPosts : allPosts.filter(p => p.platform === activeFilter);
   if (!list.length) {
-    grid.innerHTML = `
-      <div class="posts-empty">
-        <i class="fas fa-inbox"></i>
-        <h4>No posts yet</h4>
-        <p>Try a different filter or refresh the feed.</p>
-      </div>`;
+    grid.innerHTML = `<div class="posts-empty"><i class="fas fa-inbox"></i><h4>No posts yet</h4><p>Try a different filter or refresh the feed.</p></div>`;
     return;
   }
   grid.innerHTML = list.map((p, i) => {
@@ -1272,31 +1005,50 @@ function renderPosts() {
     const media = p.image
       ? `<div class="post-media"><span class="post-source" data-p="${p.platform}"><i class="${icon}"></i> ${p.platform}</span><img src="${p.image}" alt="${(p.title||'').replace(/"/g,'&quot;')}" loading="lazy" onerror="this.parentElement.classList.add('no-img'); this.remove();" /></div>`
       : `<div class="post-media no-img"><i class="${icon}"></i></div>`;
-    return `
-      <article class="post-card" style="animation-delay:${i * 60}ms">
-        ${media}
-        <div class="post-body">
-          <div class="post-meta">
-            <div class="avatar">${p.avatar || 'KRB'}</div>
-            <span class="author">${p.author || 'Kabi Raj Bhatt'}</span>
-            <span class="dot"></span>
-            <span>${p.date || 'Recently'}</span>
-          </div>
-          <h3 class="post-title">${p.title || 'Untitled post'}</h3>
-          <p class="post-text">${p.text || ''}</p>
-          ${tags ? `<div class="post-tags">${tags}</div>` : ''}
-          <div class="post-foot">
-            <div class="post-stats">
-              <span><i class="fas fa-heart"></i> ${p.likes || 0}</span>
-              <span><i class="fas fa-comment"></i> ${p.comments || 0}</span>
-            </div>
-            <a class="post-open" href="${p.url || '#'}" ${p.url && p.url.startsWith('http') ? 'target="_blank" rel="noopener"' : ''} data-cursor="hover">
-              Open <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
+    return `<article class="post-card" style="animation-delay:${i * 60}ms">
+      ${media}
+      <div class="post-body">
+        <div class="post-meta">
+          <div class="avatar">${p.avatar || 'KRB'}</div>
+          <span class="author">${p.author || 'Kabi Raj Bhatt'}</span>
+          <span class="dot"></span>
+          <span>${p.date || 'Recently'}</span>
         </div>
-      </article>`;
+        <h3 class="post-title">${p.title || 'Untitled post'}</h3>
+        <p class="post-text">${p.text || ''}</p>
+        ${tags ? `<div class="post-tags">${tags}</div>` : ''}
+        <div class="post-foot">
+          <div class="post-stats">
+            <span><i class="fas fa-heart"></i> ${p.likes || 0}</span>
+            <span><i class="fas fa-comment"></i> ${p.comments || 0}</span>
+          </div>
+          <a class="post-open" href="${p.url || '#'}" ${p.url && p.url.startsWith('http') ? 'target="_blank" rel="noopener"' : ''} data-cursor="hover">Open <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </article>`;
   }).join('');
+}
+
+/* ---- Try loading real posts from social/post.html ---- */
+async function tryLoadRealPosts() {
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 3000);
+    const res = await fetch(POSTS_ENDPOINT + '?t=' + Date.now(), { cache: 'no-store', signal: controller.signal });
+    clearTimeout(timeoutId);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const html = await res.text();
+    const m = html.match(/<script[^>]*id=["']posts-data["'][^>]*>([\s\S]*?)<\/script>/i);
+    if (!m) throw new Error('No posts-data block found');
+    const parsed = JSON.parse(m[1].trim());
+    if (Array.isArray(parsed) && parsed.length) {
+      allPosts = parsed;
+      renderPosts();
+      console.log('%c✓ Loaded ' + parsed.length + ' real posts from social/post.html', 'color:#34d399;font-weight:600;');
+    }
+  } catch (err) {
+    console.log('%cℹ social/post.html not reachable — using demo feed. (' + err.message + ')', 'color:#8b97b8;');
+  }
 }
 
 /* ---- Filters ---- */
@@ -1312,13 +1064,15 @@ filters.addEventListener('click', e => {
 /* ---- Refresh ---- */
 refreshBtn.addEventListener('click', async () => {
   refreshBtn.classList.add('spinning');
-  await loadPosts();
+  await tryLoadRealPosts();
   setTimeout(() => refreshBtn.classList.remove('spinning'), 600);
   showToast('Feed refreshed!', 'success');
 });
 
-/* ---- Init ---- */
-loadPosts();
+/* ---- INIT: render demo immediately, then try real fetch in background ---- */
+allPosts = DEMO_POSTS;
+renderPosts();
+tryLoadRealPosts();
 
 /* ============ CONTACT FORM ============ */
 const form = document.getElementById('contactForm');
@@ -1386,7 +1140,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 /* ============ CONSOLE ============ */
 console.log('%c⚡ KABI RAJ BHATT — PREMIUM PROFILE', 'background:linear-gradient(135deg,#7c5cff,#22d3ee);color:#fff;font-size:16px;font-weight:800;padding:10px 20px;border-radius:8px;');
 console.log('%c🛒 Brother Mart Affiliate · Admin Support · Digital Services', 'color:#a78bfa;font-weight:600;font-size:12px;');
-console.log('%c📬 Posts module connected to: social/post.html', 'color:#22d3ee;font-size:12px;');
+console.log('%c📬 Posts feed active — demo shows immediately, then tries social/post.html', 'color:#22d3ee;font-size:12px;');
 console.log('%c🎫 Coupon: TOP1 → Rs 300 OFF', 'color:#fbbf24;font-size:12px;');
 </script>
 </body>
